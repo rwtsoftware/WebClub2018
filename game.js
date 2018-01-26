@@ -1,11 +1,11 @@
 var clickHereButtonHandler = function() {
 	var current_value = Number.parseInt($('#click-here-count').text());
-	$('#click-here-count').text(current_value + 1858576587379);
+	$('#click-here-count').text(current_value + 10);
 };
 
 var secondCounterHandler = function() {
     var current_value = Number.parseInt($('#second-timer-count').text());
-    $('#second-timer-count').text(current_value + 1000000000);
+    $('#second-timer-count').text(current_value + 10);
 };
 
 var setEventHandlers = function() {
