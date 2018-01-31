@@ -5,7 +5,7 @@ var clickHereButtonHandler = function() {
 
 var secondCounterHandler = function() {
     var current_value = Number.parseInt($('#second-timer-count').text());
-    $('#second-timer-count').text(current_value + 10);
+    $('#second-timer-count').text(current_value + 1);
 };
 
 var setEventHandlers = function() {
