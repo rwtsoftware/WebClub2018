@@ -5,7 +5,7 @@ var PickUpWoodButtonClick = function() {
 
 var secondCounterHandler = function() {
     var current_value = Number.parseInt($('#second-timer-count').text());
-    $('one secondtimer').text(current_value + 10000000000000000000000000);
+    $('#second-timer-count').text(current_value + 1);
 };
 
 var setEventHandlers = function() {
