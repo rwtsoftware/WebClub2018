@@ -10,7 +10,7 @@ var secondCounterHandler = function() {
 
 var setEventHandlers = function() {
 	$('#click-here-button').click(PickUpWoodButtonClick);
-	setInterval(secondCounterHandler, 1000);
+	setInterval(oneSecondTimer, 1000);
 };
 
 $( document ).ready(function() {
