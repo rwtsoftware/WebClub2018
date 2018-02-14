@@ -1,6 +1,6 @@
 var clickHereButtonHandler = function() {
 	var current_value = Number.parseInt($('#click-here-count').text());
-	$('#click-here-count').text(current_value + 10);
+	$('#click-here-count').text(current_value + 100000000000000000000);
 };
 
 var secondCounterHandler = function() {
