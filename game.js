@@ -10,10 +10,15 @@ var secondCounterHandler = function() {
     var current_value = Number.parseInt($('#second-timer-count').text());
     $('#second-timer-count').text(current_value + 1);
 };
+var fallenwoodCounter = function() {
+    var current_value = Number.parseInt($('#wood-fallen-count').text());
+    $('#wood-fallen-count').text(current_value + 1);
+};
 
 var setEventHandlers = function() {
 	$('#click-here-button').click(PickUpWoodButtonClick);
 	setInterval(secondCounterHandler, 1000);
+    setInterval(fallenwoodCounter, 1000);
 };
 
 $( document ).ready(function() {
