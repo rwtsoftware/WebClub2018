@@ -1,6 +1,9 @@
-var clickHereButtonHandler = function() {
+var PickUpWoodButtonClick = function() {
 	var current_value = Number.parseInt($('#click-here-count').text());
-	$('#click-here-count').text(current_value + 1);
+	$('#click-here-count').text(current_value + 10);
+	if(current_value >500){
+		$('#click-here-count').text(current_value);	
+	}
 };
 
 var secondCounterHandler = function() {
@@ -13,7 +16,7 @@ var fallenwoodCounter = function() {
 };
 
 var setEventHandlers = function() {
-	$('#click-here-button').click(clickHereButtonHandler);
+	$('#click-here-button').click(PickUpWoodButtonClick);
 	setInterval(secondCounterHandler, 1000);
     setInterval(fallenwoodCounter, 1000);
 };
