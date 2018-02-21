@@ -1,8 +1,9 @@
 var PickUpWoodButtonClick = function() {
 	var current_value = Number.parseInt($('#click-here-count').text());
 	$('#click-here-count').text(current_value + 10);
-	if(current_value >500){
-		$('#click-here-count').text(current_value);	
+	if(current_value >50){
+		$('#click-here-count').text(current_value);
+		$('#click-here-count').addClass('inventory-full');
 	}
 };
 
