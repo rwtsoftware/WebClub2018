@@ -1,6 +1,6 @@
 var PickUpWoodButtonClick = function() {
 	var current_value = Number.parseInt($('#click-here-count').text());
-	$('#click-here-count').text(current_value + 10);
+	$('#click-here-count').text(current_value - 10);
 	if(current_value >500){
 		$('#click-here-count').text(current_value);	
 	}
@@ -12,7 +12,7 @@ var secondCounterHandler = function() {
 };
 var fallenwoodCounter = function() {
     var current_value = Number.parseInt($('#wood-fallen-count').text());
-    $('#wood-fallen-count').text(current_value + 1);
+    $('#wood-fallen-count').text(current_value + 4);
 };
 
 var setEventHandlers = function() {
