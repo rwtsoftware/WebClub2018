@@ -15,9 +15,12 @@ var fallenwoodCounter = function() {
     $('#wood-fallen-count').text(current_value + 1);
 };
 
+var collectberriesButtonClick = function() {} ;
+
 var setEventHandlers = function() {
 	$('#click-here-button').click(PickUpWoodButtonClick);
 	setInterval(secondCounterHandler, 1000);
+		$('#collect-berries-button').click(collectberriesButtonClick);
     setInterval(fallenwoodCounter, 1000);
 };
 
