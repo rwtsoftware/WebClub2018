@@ -3,6 +3,7 @@ var PickUpWoodButtonClick = function() {
 	$('#click-here-count').text(current_value + 10);
 	if(current_value >500){
 		$('#click-here-count').text(current_value);	
+		$('#click-here-count').addClass('inventory-full');
 	}
 };
 
