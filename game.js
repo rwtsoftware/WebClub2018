@@ -17,7 +17,7 @@ var fallenwoodCounter = function() {
 
 var setEventHandlers = function() {
 	$('#click-here-button').click(PickUpWoodButtonClick);
-	setInterval(secondCounterHandler, 1000);
+	setInterval(one second timer, 1000);
     setInterval(fallenwoodCounter, 1000);
 };
 
