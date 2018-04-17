@@ -3,6 +3,7 @@ var PickUpWoodButtonClick = function() {
 	$('#click-here-count').text(current_value + 10);
 	if(current_value >500){
 		$('#click-here-count').text(current_value);	
+		$('#click-here-count').addClass('inventory-full');
 	}
 };
 
@@ -15,9 +16,15 @@ var fallenwoodCounter = function() {
     $('#wood-fallen-count').text(current_value + 1);
 };
 
+var collectberriesButtonClick = function() {
+	$('body').append('&#x1f347;');
+	
+} ;
+
 var setEventHandlers = function() {
-	$('#click-here-button').click(PickUpWoodButtonClick);
+	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
 	setInterval(secondCounterHandler, 1000);
+		$('#collect-berries-button').click(collectberriesButtonClick);
     setInterval(fallenwoodCounter, 1000);
 };
 
