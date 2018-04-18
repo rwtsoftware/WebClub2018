@@ -5,3 +5,7 @@
 body{
 	background-color:orange;
 }
+button{
+	border:red;
+	border-style:solid;
+}
