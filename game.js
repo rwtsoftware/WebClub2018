@@ -5,6 +5,8 @@ var PickUpWoodButtonClick = function() {
 		$('#click-here-count').text(current_value);	
 		$('#click-here-count').addClass('inventory-full');
 	}
+    current_value = Number.parseInt($('#wood-fallen-count').text());
+    $('#wood-fallen-count').text(current_value -10);
 };
 
 var onesecondtimer = function() {
@@ -13,7 +15,7 @@ var onesecondtimer = function() {
 };
 var fallenwoodCounter = function() {
     var current_value = Number.parseInt($('#wood-fallen-count').text());
-    $('#wood-fallen-count').text(current_value + 1);
+    $('#wood-fallen-count').text(current_value +1);
 };
 
 var collectberriesButtonClick = function() {
