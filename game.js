@@ -4,9 +4,9 @@ var PickUpWoodButtonClick = function() {
 	if(current_value >500){
 		$('#click-here-count').text(current_value);	
 		$('#click-here-count').addClass('inventory-full');
-	}  
-   current_value = Number.parseInt($('#wood-fallen-count').text());
-    $('#wood-fallen-count').text(current_value -10);
+	} 
+	current_value = Number.parseInt($('#wood-fallen-count').text());
+  $('#wood-fallen-count').text(current_value - 10);
 };
 
 var onesecondtimer = function() {
