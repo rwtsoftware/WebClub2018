@@ -15,7 +15,11 @@ var fallenwoodCounter = function() {
     $('#wood-fallen-count').text(current_value + 1);
 };
 
+var changetimeofdayCounter= function() {
+};
 var setEventHandlers = function() {
+	 setInterval(changetimeofdayCounter, 30000);
+
 	$('#click-here-button').click(PickUpWoodButtonClick);
 	setInterval(secondCounterHandler, 1000);
     setInterval(fallenwoodCounter, 1000);
