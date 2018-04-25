@@ -16,7 +16,7 @@ var fallenwoodCounter = function() {
     $('#wood-fallen-count').text(current_value + 1);
 };
 
-var collectberriesButtonClick = function() {
+) {var collectberriesButtonClick = function(
 	$('body').append('&#x1f347;');
 	
 } ;
@@ -32,3 +32,4 @@ var setEventHandlers = function() {
 $( document ).ready(function() {
     setEventHandlers();
 });
+) {var collectberriesButtonClick = function(fire
