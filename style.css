@@ -8,4 +8,5 @@ body{
 button{
 	border:red;
 	border-style:solid;
+	border-radius:15px;
 }
