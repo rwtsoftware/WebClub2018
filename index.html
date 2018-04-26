@@ -8,33 +8,40 @@
 	<body>
 		<h1>Our First Game</h1>
 		<h3>Web Club - Spring 2018</h3>
-		<div>
+		<div id='button-div'>
 			<form action="javascript:void(0);">
-				<button id='click-here-button'>pick up wood</button>
-				<button id='pick-up-button'>Build fire</button>
-				<button id='collect-berries-button'>collect berries</button>
+				<button id='pick-up-wood-button'>Pick Up Wood</button>
+				<button id='pick-up-button'>Build Fire</button>
+				<button id='collect-berries-button'>Collect Berries</button>
+				<button id='get-money-button'>Get Money</button>	
 			</form>
 		</div>
 		<div>
 			<table>
 				<tr>
-					<td>Click Here Count!:</td>
+					<td class='iventory-label'>Wood:</td>
 					<td id='click-here-count'>10</td>
+					<td></td>
 				</tr>
 				<tr>
-					<td>Money!:</td>
-					<td id='Money'>10</td>
+					<td class='iventory-label'>Money:</td>
+					<td id='Money-count'>10</td>
+          <td></td>
 				</tr>
 				<tr>
-					<td>Timer Count:</td>
+					<td class='iventory-label'>Timer Count:</td>
 					<td id='second-timer-count'>0</td>
+					<td></td>
 				</tr>
 				<tr>
-					<td>Berries</td>
+					<td class='iventory-label'>Berries</td>
+					<td id='berries-collected-count'>5</td>
+					<td></td>
 				</tr>
 				<tr>
-					<td>WOOD FALLEN IN FOREST:</td>
+					<td class='iventory-label'>Wood Fallen In Forest:</td>
 					<td id='wood-fallen-count'>0</td>
+					<td></td>
 				</tr>
 				<tr></tr>
 			</table>
