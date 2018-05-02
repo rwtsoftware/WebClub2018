@@ -29,6 +29,7 @@ var changetimeofdayCounter= function() {
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
 	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
+	(build-fire-button$).click(PickUpWoodButtonClick);
 	setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').mouseover(collectberriesButtonClick);
   setInterval(fallenwoodCounter, 1000);
