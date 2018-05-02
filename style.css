@@ -2,6 +2,9 @@
 	background-color:red;
 }
 
+.inventory-full{
+	text-align:right;
+}
 body{
 	background-color:orange;
 }
