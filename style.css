@@ -1,7 +1,11 @@
 .inventory-full{
 	background-color:red;
 }
-
+#inventory-div{
+	width:50%;
+	float:left;
+	overflow:hidden;
+}
 body{
 	background-color:orange;
 }
