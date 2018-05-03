@@ -25,6 +25,8 @@ var collectberriesButtonClick = function() {
 
 var changetimeofdayCounter= function() {
 };
+var buildfire= function() {
+};
 
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
