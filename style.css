@@ -1,10 +1,15 @@
 .inventory-full{
 	background-color:red;
 }
+
 #inventory-div{
 	width:50%;
 	float:left;
 	overflow:hidden;
+}
+
+.inventory-full{
+	text-align:right;
 }
 body{
 	background-color:orange;
