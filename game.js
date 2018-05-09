@@ -1,4 +1,8 @@
 var PickUpWoodButtonClick = function() {
+		if(Number.parseInt($('#wood-fallen-count').text()) <10){
+			alert("no wood left");
+		}
+		
 	var current_value = Number.parseInt($('#click-here-count').text());
 	$('#click-here-count').text(current_value + 10);
 	if(current_value >500){
