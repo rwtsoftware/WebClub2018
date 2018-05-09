@@ -27,6 +27,7 @@ var changetimeofdayCounter= function() {
 	$('body').css('background-color', '#'+Math.floor($('#second-timer-count').text()/10)%10*111111);
 };
 var buildfire= function() {
+$('body').append('&#x1f525;'); 
 };
 
 var setEventHandlers = function() {
