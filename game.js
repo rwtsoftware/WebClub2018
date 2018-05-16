@@ -1,6 +1,7 @@
 var PickUpWoodButtonClick = function() {
 		if(Number.parseInt($('#wood-fallen-count').text()) <10){
 			alert("no wood left");
+			return;
 		}
 		
 	var current_value = Number.parseInt($('#click-here-count').text());
@@ -35,7 +36,7 @@ $('body').append('&#x1f525;');
 };
 
 var setEventHandlers = function() {
-  setInterval(changetimeofdayCounter, 30000);
+  setInterval(changetimeofdayCounter, 1000);
 	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
 		$('#build-fire-button').click(buildfire);
 
