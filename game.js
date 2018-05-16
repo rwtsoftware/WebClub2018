@@ -23,7 +23,7 @@ var fallenwoodCounter = function() {
 };
 
 var collectberriesButtonClick = function() {
-	$('body').append('&#x1f347;');
+	$('#emoji-div').append('&#x1f347;');
 	
 } ;
 
