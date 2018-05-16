@@ -20,4 +20,5 @@ button{
 	height:40px;
 	width:120px;
 	border-radius:15px;
+	background-color:inherit;
 }
