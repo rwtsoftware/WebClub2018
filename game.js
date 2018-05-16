@@ -46,4 +46,9 @@ var setEventHandlers = function() {
 
 $( document ).ready(function() {
     setEventHandlers();
-});
+}); var notReadyForThis= function() {
+alert ("Not Ready");
+};
+var buildfire= function() {
+$('body').append('&#x1f525;'); 
+};
