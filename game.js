@@ -33,12 +33,13 @@ var changetimeofdayCounter= function() {
 var buildfire= function() {
 $('body').append('&#x1f525;'); 
 };
-
+var sellBerries= function() {
+};
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
 	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
 		$('#build-fire-button').click(buildfire);
-
+		$('sell-berries-button').click(sellBerries);
 	setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').mouseover(collectberriesButtonClick);
   setInterval(fallenwoodCounter, 1000);
@@ -46,4 +47,5 @@ var setEventHandlers = function() {
 
 $( document ).ready(function() {
     setEventHandlers();
-});
+})
+('#collect-berries-button')
