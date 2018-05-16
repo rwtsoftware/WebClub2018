@@ -21,3 +21,7 @@ button{
 	width:120px;
 	border-radius:15px;
 }
+#button-div  table{
+border: black;
+border-style:solid;
+}
