@@ -36,6 +36,7 @@ $('body').append('&#x1f525;');
 
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
+  $('#sell-wood').click(SellWoodButtonClick);
 	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
 		$('#build-fire-button').click(buildfire);
 
