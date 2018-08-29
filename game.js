@@ -34,6 +34,13 @@ var buildfire= function() {
 $('body').append('&#x1f525;'); 
 };
 
+var setSpotlightTracking = function() {
+  $(document).mousemove(function (e) {
+    $('#mouse-div').css("top", e.pageY-5040);
+    $('#mouse-div').css("left", e.pageX-5040)
+  });
+};
+
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
 	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
@@ -42,6 +49,7 @@ var setEventHandlers = function() {
 	setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').mouseover(collectberriesButtonClick);
   setInterval(fallenwoodCounter, 1000);
+  setSpotlightTracking();
 };
 
 $( document ).ready(function() {

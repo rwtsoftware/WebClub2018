@@ -25,3 +25,14 @@ button{
      height: 22px;	
 
 }
+
+#mouse-div {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    background-color: transparent;
+    border-color: green;
+    border-width: 5000px;
+    border-style: solid;
+    pointer-events: none;
+}
