@@ -31,22 +31,30 @@ var changetimeofdayCounter= function() {
 	$('body').css('background-color', '#'+Math.floor($('#second-timer-count').text()/10)%10*111111);
 };
 var buildfire= function() {
-$('body').append('&#x1f525;'); 
+  $('body').append('&#x1f525;'); 
+  var originalOpacity = $('#mouse-div').css("opacity");
+  console.log(originalOpacity);
+  $('#mouse-div').css("opacity", originalOpacity * .9);
 };
 
 var setSpotlightTracking = function() {
+  $('#mouse-div').css("top", 0-5040);
+  $('#mouse-div').css("left", 0-5040)
   $(document).mousemove(function (e) {
     $('#mouse-div').css("top", e.pageY-5040);
     $('#mouse-div').css("left", e.pageX-5040)
   });
 };
 
+var notReadyForThis= function() {
+alert ("Not Ready");
+};
+
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
-	$('#pick-up-wood-button').click(PickUpWoodButtonClick);
-		$('#build-fire-button').click(buildfire);
-
-	setInterval(onesecondtimer, 1000);
+  $('#pick-up-wood-button').click(PickUpWoodButtonClick);
+  $('#build-fire-button').click(buildfire);
+  setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').mouseover(collectberriesButtonClick);
   setInterval(fallenwoodCounter, 1000);
   setSpotlightTracking();
@@ -54,9 +62,4 @@ var setEventHandlers = function() {
 
 $( document ).ready(function() {
     setEventHandlers();
-}); var notReadyForThis= function() {
-alert ("Not Ready");
-};
-var buildfire= function() {
-$('body').append('&#x1f525;'); 
-};
+});
