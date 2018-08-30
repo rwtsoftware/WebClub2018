@@ -1,13 +1,14 @@
 var PickUpWoodButtonClick = function() {
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
-    alert("no wood left");
+    alert("no wood found in forest");
+    return;
   }
 
-  var current_value = Number.parseInt($('#click-here-count').text());
-  $('#click-here-count').text(current_value + 10);
+  var current_value = Number.parseInt($('#wood-collected-count').text());
+  $('#wood-collected-count').text(current_value + 10);
   if(current_value >500){
-    $('#click-here-count').text(current_value);	
-    $('#click-here-count').addClass('inventory-full');
+    $('#wood-collected-count').text(current_value);	
+    $('#wood-collected-count').addClass('inventory-full');
   }
   current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value - 10);
@@ -31,6 +32,14 @@ var changetimeofdayCounter= function() {
 };
 
 var buildfire= function() {
+  if(Number.parseInt($('#wood-collected-count').text()) <10){
+    alert("no wood collected left");
+    return;
+  }
+
+  current_value = Number.parseInt($('#wood-collected-count').text());
+  $('#wood-collected-count').text(current_value - 10);
+
   $('body').append('&#x1f525;'); 
   var originalOpacity = $('#mouse-div').css("opacity");
   console.log(originalOpacity);
