@@ -1,35 +1,35 @@
 var PickUpWoodButtonClick = function() {
-		if(Number.parseInt($('#wood-fallen-count').text()) <10){
-			alert("no wood left");
-		}
-		
-	var current_value = Number.parseInt($('#click-here-count').text());
-	$('#click-here-count').text(current_value + 10);
-	if(current_value >500){
-		$('#click-here-count').text(current_value);	
-		$('#click-here-count').addClass('inventory-full');
-	} 
-	current_value = Number.parseInt($('#wood-fallen-count').text());
+  if(Number.parseInt($('#wood-fallen-count').text()) <10){
+    alert("no wood left");
+  }
+
+  var current_value = Number.parseInt($('#click-here-count').text());
+  $('#click-here-count').text(current_value + 10);
+  if(current_value >500){
+    $('#click-here-count').text(current_value);	
+    $('#click-here-count').addClass('inventory-full');
+  }
+  current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value - 10);
 };
 
 var onesecondtimer = function() {
-    var current_value = Number.parseInt($('#second-timer-count').text());
-    $('#second-timer-count').text(current_value + 1);
+  var current_value = Number.parseInt($('#second-timer-count').text());
+  $('#second-timer-count').text(current_value + 1);
 };
 var fallenwoodCounter = function() {
-    var current_value = Number.parseInt($('#wood-fallen-count').text());
-    $('#wood-fallen-count').text(current_value + 1);
+  var current_value = Number.parseInt($('#wood-fallen-count').text());
+  $('#wood-fallen-count').text(current_value + 1);
 };
 
 var collectberriesButtonClick = function() {
-	$('#emoji-div').append('&#x1f347;');
-	
+  $('#emoji-div').append('&#x1f347;');
 } ;
 
 var changetimeofdayCounter= function() {
-	$('body').css('background-color', '#'+Math.floor($('#second-timer-count').text()/10)%10*111111);
+  $('body').css('background-color', '#'+Math.floor($('#second-timer-count').text()/10)%10*111111);
 };
+
 var buildfire= function() {
   $('body').append('&#x1f525;'); 
   var originalOpacity = $('#mouse-div').css("opacity");
@@ -46,8 +46,8 @@ var setSpotlightTracking = function() {
   });
 };
 
-var notReadyForThis= function() {
-alert ("Not Ready");
+var notReadyForThis = function() {
+  alert ("Not Ready");
 };
 
 var setEventHandlers = function() {
@@ -61,5 +61,5 @@ var setEventHandlers = function() {
 };
 
 $( document ).ready(function() {
-    setEventHandlers();
+  setEventHandlers();
 });
