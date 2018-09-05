@@ -65,7 +65,7 @@ var notReadyForThis = function() {
   alert ("Not Ready");
 };
 
-var setEventHandlers = function() {.
+var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
