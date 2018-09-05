@@ -23,7 +23,9 @@ var fallenwoodCounter = function() {
   $('#wood-fallen-count').text(current_value + 1);
 };
 
-var collectberriesButtonClick = function() {
+var collectberriesButtonClick = function() { 
+	var current_value = Number.parseInt($('#wood-collected-count').text());
+  $('#wood-collected-count').text(current_value + 10);
 	$('#berries-collected-count').text('25');
   $('#emoji-div').append('&#x1f347;');
 } ;
