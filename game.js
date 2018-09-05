@@ -26,7 +26,7 @@ var fallenwoodCounter = function() {
 var collectberriesButtonClick = function() { 
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10);
-	$('#berries-collected-count').text('25');
+	$('#berries-collected-count').text('');
   $('#emoji-div').append('&#x1f347;');
 } ;
 
