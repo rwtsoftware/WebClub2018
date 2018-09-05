@@ -23,7 +23,7 @@ var fallenwoodCounter = function() {
   $('#wood-fallen-count').text(current_value + 1);
 };
 
-var collectberriesButtonClick = function() {
+var collectberriesButtonClick = function(10000000) {
   $('#emoji-div').append('&#x1f347;');
 } ;
 
@@ -65,7 +65,7 @@ var setEventHandlers = function() {
   $('#build-fire-button').click(buildfire);
   setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').mouseover(collectberriesButtonClick);
-  setInterval(fallenwoodCounter, 1000);
+  setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
 };
 
