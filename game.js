@@ -24,6 +24,7 @@ var fallenwoodCounter = function() {
 };
 
 var collectberriesButtonClick = function() {
+	$('berries-collected-count').text(25)
   $('#emoji-div').append('&#x1f347;');
 } ;
 
