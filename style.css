@@ -1,5 +1,5 @@
 .inventory-full{
-	background-color:red;
+	background-color:green;
 }
 
 #button-div{
@@ -15,11 +15,11 @@ body{
 	background-color:orange;
 }
 button{
-	border:red;
+	border:blue;
 	border-style:solid;
 	height:40px;
 	width:120px;
-	border-radius:15px
+	border-radius:15px;
 }
 #inventory-div button{
      height: 22px;	
