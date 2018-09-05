@@ -59,6 +59,9 @@ var setSpotlightTracking = function() {
 };
 
 var GetMoney = function() {
+		var current_value = Number.parseInt($('#Money-count').text());
+  $('#Money-count').text(current_value + 10);
+	id='#Money-count
   alert ("Not Ready");
 };
 var notReadyForThis = function() {
