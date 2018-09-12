@@ -71,6 +71,8 @@ var notReadyForThis = function() {
 var healthButtonClick = function() {
 	var current_value = Number.parseInt($('#Health-count-').text());
 	 $('#Health-count-').text(current_value + 2);
+	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
+  $('#berries-collected-count').text(current_value2 - 10);
  
 };
 var setEventHandlers = function() {
