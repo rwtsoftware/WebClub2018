@@ -75,7 +75,7 @@ var setEventHandlers = function() {
   $('#build-fire-button').click(buildfire);
   $('#get-money-button').click(GetMoney);
   setInterval(onesecondtimer, 1000);
-  $('#collect-berries-button').mouseover(collectberriesButtonClick);
+  $('#collect-berries-button').click(collectberriesButtonClick);
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
 };
