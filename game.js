@@ -70,6 +70,8 @@ var notReadyForThis = function() {
 };
 
 var healthButtonClick = function() {
+	var current_value = Number.parseInt($('#berries-collected-count').text());
+	 $('#Health-count-').text(current_value + 5);
   alert ("Not Ready");
 };
 var setEventHandlers = function() {
