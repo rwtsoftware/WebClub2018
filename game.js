@@ -69,6 +69,9 @@ var notReadyForThis = function() {
   alert ("Not Ready");
 };
 
+var healthButtonClick = function() {
+  alert ("Not Ready");
+};
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
@@ -78,8 +81,8 @@ var setEventHandlers = function() {
   $('#collect-berries-button').click(collectberriesButtonClick);
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
+    $('#Health').click(healthButtonClick);
 };
-
 $( document ).ready(function() {
   setEventHandlers();
 });
