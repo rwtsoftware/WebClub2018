@@ -71,8 +71,8 @@ var notReadyForThis = function() {
 
 var healthButtonClick = function() {
 	var current_value = Number.parseInt($('#Health-count-').text());
-	 $('#Health-count-').text(current_value + 8);
-  alert ("Not Ready");
+	 $('#Health-count-').text(current_value + 9);
+ 
 };
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
