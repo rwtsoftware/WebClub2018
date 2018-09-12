@@ -28,7 +28,7 @@ var collectberriesButtonClick = function() {
   $('#berries-collected-count').text(current_value + 10);
 	
   $('#emoji-div').append('&#x1f347;');
-   $('#Health-count-').text(current_value + 10);
+   $('#Health-count-').text(current_value + 5);
 } ;
 
 var changetimeofdayCounter= function() {
