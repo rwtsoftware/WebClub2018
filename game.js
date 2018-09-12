@@ -27,7 +27,7 @@ var collectberriesButtonClick = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10);
 	
-
+ $('#emoji-div').append('&#x1f347;');
 } ;
 
 var changetimeofdayCounter= function() {
