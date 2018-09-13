@@ -27,7 +27,7 @@ var collectberriesButtonClick = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10);
 	
-  $('#emoji-div').append('&#x1f347;');
+ $('#emoji-div').append('&#x1f347;');
 } ;
 
 var changetimeofdayCounter= function() {
@@ -68,17 +68,24 @@ var notReadyForThis = function() {
   alert ("Not Ready");
 };
 
+var healthButtonClick = function() {
+	var current_value = Number.parseInt($('#Health-count-').text());
+	 $('#Health-count-').text(current_value + 2);
+	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
+  $('#berries-collected-count').text(current_value2 - 10);
+ 
+};
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
   $('#get-money-button').click(GetMoney);
   setInterval(onesecondtimer, 1000);
-  $('#collect-berries-button').mouseover(collectberriesButtonClick);
+  $('#collect-berries-button').click(collectberriesButtonClick);
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
+    $('#Health').click(healthButtonClick);
 };
-
 $( document ).ready(function() {
   setEventHandlers();
 });
