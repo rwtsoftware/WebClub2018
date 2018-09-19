@@ -69,7 +69,7 @@ var notReadyForThis = function() {
 };
 
 var healthButtonClick = function() {
- if(Number.parseInt($('#berries-collected-count').text()) <12){
+ if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
     return;
 }
