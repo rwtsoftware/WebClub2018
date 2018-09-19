@@ -73,7 +73,10 @@ var healthButtonClick = function() {
 	 $('#Health-count-').text(current_value + 2);
 	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value2 - 10);
- 
+ if(Number.parseInt($('#wood-fallen-count').text()) <10){
+    alert("no wood found in forest");
+    return;
+  } 
 };
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
