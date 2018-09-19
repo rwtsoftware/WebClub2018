@@ -64,7 +64,7 @@ var GetMoney = function() {
 
   alert ("Not Ready");
 };
-var notReadyForThis = function() {
+var GetMoney = function() {
   alert ("Not Ready");
 };
 
