@@ -64,8 +64,13 @@ var GetMoney = function() {
 
  
 };
+Sellberriesbutton
+var Sellberriesbutton = function() {
+		var current_value = Number.parseInt($('#Money-count').text());
+  $('#Money-count').text(current_value + 10);
 
-
+ 
+};
 var healthButtonClick = function() {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
@@ -87,7 +92,7 @@ var setEventHandlers = function() {
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
- $('#sell-berries-button').click(GetMoney);
+ $('#sell-berries-button').click(Sellberriesbutton);
  
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
