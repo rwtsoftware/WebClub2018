@@ -62,11 +62,9 @@ var GetMoney = function() {
 		var current_value = Number.parseInt($('#Money-count').text());
   $('#Money-count').text(current_value + 10);
 
-  alert ("Not Ready");
+ 
 };
-var GetMoney = function() {
-  alert ("Not Ready");
-};
+
 
 var healthButtonClick = function() {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
