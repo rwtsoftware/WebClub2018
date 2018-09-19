@@ -87,6 +87,8 @@ var setEventHandlers = function() {
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
+ $('#sell-berries-button').click(GetMoney);
+ 
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
