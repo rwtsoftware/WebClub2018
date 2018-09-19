@@ -64,7 +64,7 @@ var GetMoney = function() {
 
  
 };
-Sellberriesbutton
+
 var Sellberriesbutton = function() {
 		var current_value = Number.parseInt($('#Money-count').text());
   $('#Money-count').text(current_value + 10);
