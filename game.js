@@ -62,26 +62,38 @@ var GetMoney = function() {
 		var current_value = Number.parseInt($('#Money-count').text());
   $('#Money-count').text(current_value + 10);
 
-  alert ("Not Ready");
-};
-var notReadyForThis = function() {
-  alert ("Not Ready");
+ 
 };
 
+var Sellberriesbutton = function() {
+		var current_value = Number.parseInt($('#Money-count').text());
+  $('#Money-count').text(current_value + 10);
+
+ 
+};
 var healthButtonClick = function() {
-	var current_value = Number.parseInt($('#Health-count-').text());
+ if(Number.parseInt($('#berries-collected-count').text()) <1){
+    alert("no berries found in forest ");
+    return;
+}
+var current_value = Number.parseInt($('#Health-count-').text());
 	 $('#Health-count-').text(current_value + 2);
 	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value2 - 10);
+  $('#berries-collected-count').text(current_value2 - 1);
+ 
+    
+    
  
 };
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
-  $('#get-money-button').click(GetMoney);
+  $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
+ $('#sell-berries-button').click(Sellberriesbutton);
+ 
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
