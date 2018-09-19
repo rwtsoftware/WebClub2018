@@ -72,8 +72,8 @@ var healthButtonClick = function() {
 	var current_value = Number.parseInt($('#Health-count-').text());
 	 $('#Health-count-').text(current_value + 2);
 	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value2 - 1);
- if(Number.parseInt($('#eat').text()) <10){
+  $('#berries-collected-count').text(current_value2 + 1);
+ if(Number.parseInt($('#').text()) <10){
     alert("no wood found in forest");
     return;
   } 
