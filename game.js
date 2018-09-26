@@ -81,11 +81,11 @@ var current_value = Number.parseInt($('#Health-count-').text());
 var DecreaseBerryCount=function( ) {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
-    return;
+    return false ;
 }
 	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value2 - 1);
-    
+   return true;  
 };
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
