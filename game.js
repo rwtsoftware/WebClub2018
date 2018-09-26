@@ -73,10 +73,11 @@ var Sellberriesbutton = function() {
  
 };
 var healthButtonClick = function() {
-	DecreaseBerryCount();
+ if	(DecreaseBerryCount()){
 
 var current_value = Number.parseInt($('#Health-count-').text());
 	 $('#Health-count-').text(current_value + 2);
+ }
 };
 var DecreaseBerryCount=function( ) {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
