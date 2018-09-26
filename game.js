@@ -66,9 +66,9 @@ var GetMoney = function() {
 };
 
 var Sellberriesbutton = function() {
-	DecreaseBerryCount();
+ if(	DecreaseBerryCount()){
 		var current_value = Number.parseInt($('#Money-count').text());
-  $('#Money-count').text(current_value + 10);
+  $('#Money-count').text(current_value + 10);}
 
  
 };
