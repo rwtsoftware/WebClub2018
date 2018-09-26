@@ -65,7 +65,7 @@ var GetMoney = function() {
  
 };
 
-var Sellberriesbutton = function() {
+var Sellberriesbutton = function() {DecreaseBerryCount();
 		var current_value2 = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value2 - 1);
 		var current_value = Number.parseInt($('#Money-count').text());
@@ -74,19 +74,18 @@ var Sellberriesbutton = function() {
  
 };
 var healthButtonClick = function() {
+	DecreaseBerryCount();
  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
     return;
 }
 var current_value = Number.parseInt($('#Health-count-').text());
 	 $('#Health-count-').text(current_value + 2);
+};
+var DecreaseBerryCount=function( ) {
 	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value2 - 1);
-  
- 
     
-    
- 
 };
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
