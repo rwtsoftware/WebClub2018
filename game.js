@@ -66,24 +66,27 @@ var GetMoney = function() {
 };
 
 var Sellberriesbutton = function() {
+ if(	DecreaseBerryCount()){
 		var current_value = Number.parseInt($('#Money-count').text());
-  $('#Money-count').text(current_value + 10);
+  $('#Money-count').text(current_value + 10);}
 
  
 };
 var healthButtonClick = function() {
- if(Number.parseInt($('#berries-collected-count').text()) <1){
-    alert("no berries found in forest ");
-    return;
-}
+ if	(DecreaseBerryCount()){
+
 var current_value = Number.parseInt($('#Health-count-').text());
 	 $('#Health-count-').text(current_value + 2);
+ }
+};
+var DecreaseBerryCount=function( ) {
+ if(Number.parseInt($('#berries-collected-count').text()) <1){
+    alert("no berries found in forest ");
+    return false ;
+}
 	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value2 - 1);
- 
-    
-    
- 
+   return true;  
 };
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
