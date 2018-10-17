@@ -64,7 +64,12 @@ var GetMoney = function() {
 
  
 };
-
+var sellwood=function() {
+  if(	DecreaseBerryCount()){
+		var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 10);
+  }	
+};
 var Sellberriesbutton = function() {
  if(	DecreaseBerryCount()){
 		var current_value = Number.parseInt($('#Money-count').text());
@@ -92,6 +97,7 @@ var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
+  $('#sell-wood').click(sellwood);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer, 1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
