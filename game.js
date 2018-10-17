@@ -107,7 +107,7 @@ var Decreasehealth=function( ) {
     alert("no berries found in forest ");
     return false ;
 }
-	 	var current_value2 = Number.parseInt($('Health-count-').text());
+	 	var current_value2 = Number.parseInt($('#Health-count-').text());
   $('#Health-count-').text(current_value2 - 1);
    return true;  
 };
