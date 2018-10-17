@@ -104,7 +104,7 @@ var DecreasewoodCount=function( ) {
 };
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
-    alert("no berries found in forest ");
+    
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
