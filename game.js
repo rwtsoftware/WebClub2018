@@ -118,7 +118,7 @@ var setEventHandlers = function() {
   $('#sell-wood').click(sellwood);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer,1000);
-  setInterval(Decreasehealth,1);
+  setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
  
