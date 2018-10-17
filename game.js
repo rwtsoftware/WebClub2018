@@ -108,7 +108,7 @@ var setEventHandlers = function() {
   $('#build-fire-button').click(buildfire);
   $('#sell-wood').click(sellwood);
   $('#get-money-button').keypress(GetMoney);
-  setInterval(onesecondtimer, 1000);
+  setInterval(onesecondtimer, 1);
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
  
