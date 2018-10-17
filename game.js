@@ -103,12 +103,12 @@ var DecreasewoodCount=function( ) {
    return true;  
 };
 var Decreasehealth=function( ) {
- if(Number.parseInt($('Health-count-').text()) <1){
+ if(Number.parseInt($('#Health-count-').text()) <1){
     alert("no berries found in forest ");
     return false ;
 }
-	 	var current_value2 = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value2 - 1);
+	 	var current_value2 = Number.parseInt($('Health-count-').text());
+  $('#Health-count-').text(current_value2 - 1);
    return true;  
 };
 var setEventHandlers = function() {
