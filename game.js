@@ -64,7 +64,12 @@ var GetMoney = function() {
 
  
 };
-
+var sellwood=function() {
+  if(	DecreasewoodCount()){
+		var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 10);
+  }	
+};
 var Sellberriesbutton = function() {
  if(	DecreaseBerryCount()){
 		var current_value = Number.parseInt($('#Money-count').text());
@@ -88,12 +93,32 @@ var DecreaseBerryCount=function( ) {
   $('#berries-collected-count').text(current_value2 - 1);
    return true;  
 };
+var DecreasewoodCount=function( ) {
+ if(Number.parseInt($('#wood-collected-count').text()) <1){
+    alert("no berries found in forest ");
+    return false ;
+}
+	 	var current_value2 = Number.parseInt($('#wood-collected-count').text());
+  $('#wood-collected-count').text(current_value2 - 1);
+   return true;  
+};
+var Decreasehealth=function( ) {
+ if(Number.parseInt($('#Health-count-').text()) <1){
+    $('body').text('take the LL');
+    return false ;
+}
+	 	var current_value2 = Number.parseInt($('#Health-count-').text());
+  $('#Health-count-').text(current_value2 - 1);
+   return true;  
+};
 var setEventHandlers = function() {
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
+  $('#sell-wood').click(sellwood);
   $('#get-money-button').keypress(GetMoney);
-  setInterval(onesecondtimer, 1000);
+  setInterval(onesecondtimer,1000);
+  setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
  
