@@ -112,6 +112,10 @@ var Decreasehealth=function( ) {
   $('#Health-count-').text(current_value2 - 1);
    return true;  
 };
+var restartgame=function( ) {
+	  $('#gameover-div').css('visibility', 'hidden');
+    $('#game-div').css('visibility', 'visible');
+}
 var setEventHandlers = function() {
 	$('#gameover-div').css('visibility', 'hidden');
   setInterval(changetimeofdayCounter, 30000);
@@ -123,7 +127,7 @@ var setEventHandlers = function() {
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
- 
+  $('#restart-button').click(restartgame);
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
