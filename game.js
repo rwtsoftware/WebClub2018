@@ -107,6 +107,8 @@ var Decreasehealth=function( ) {
    $('#game-over').show();
  $('#inventory-div').hide();
   $('#button-div').hide();
+    $('#emoji-div').hide();
+
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
