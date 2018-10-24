@@ -41,7 +41,7 @@ var buildfire= function() {
   }
 
   current_value = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value - 10);
+  $('#wood-collected-count').text(current_value - 5);
 
   $('#emoji-div').append('&#x1f525;'); 
   var originalOpacity = $('#mouse-div').css("opacity");
