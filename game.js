@@ -1,7 +1,10 @@
 
 
 /*
-
+Todos:
+	Limit health to 100
+	Limit Berries
+	Add berries ready to be picked
 */
 var PickUpWoodButtonClick = function() {
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
