@@ -13,7 +13,9 @@ var PickUpWoodButtonClick = function() {
   current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value - 10);
 };
-
+var setstartingvalue = function(){
+		 $('#Health-count-').text(10);
+}
 var onesecondtimer = function() {
   var current_value = Number.parseInt($('#second-timer-count').text());
   $('#second-timer-count').text(current_value + 1);
