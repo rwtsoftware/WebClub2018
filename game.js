@@ -1,8 +1,8 @@
 
 
 /*
-Hey remember to do this.
 
+*/
 var PickUpWoodButtonClick = function() {
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
     alert("no wood found in forest");
