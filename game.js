@@ -115,6 +115,7 @@ var Decreasehealth=function( ) {
    return true;  
 };
 var restartgame=function( ) {
+	 setstartingvalue();
 	  $('#gameover-div').css('visibility', 'hidden');
     $('#game-div').css('visibility', 'visible');
 }
