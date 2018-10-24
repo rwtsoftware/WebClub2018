@@ -105,6 +105,7 @@ var DecreasewoodCount=function( ) {
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
     $('#gameover-div').css('visibility', 'visible');
+    $('#game-div').css('visibility', 'hidden');
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
