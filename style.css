@@ -37,3 +37,6 @@ button{
     border-style: solid;
     pointer-events: none;
 }
+#gameover-div{
+	font-size:100000000;
+}
