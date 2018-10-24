@@ -104,7 +104,7 @@ var DecreasewoodCount=function( ) {
 };
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
-    $('body').text('take the LL');
+    $('#gameover-div').css('visiblity', 'visible');
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
@@ -112,6 +112,7 @@ var Decreasehealth=function( ) {
    return true;  
 };
 var setEventHandlers = function() {
+	$('#gameover-div').css('visiblity', 'hidden');
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
