@@ -104,7 +104,8 @@ var DecreasewoodCount=function( ) {
 };
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
-    $('body').text('return to the lobby');
+   $('#game-over').show();
+
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
@@ -121,7 +122,8 @@ var setEventHandlers = function() {
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
- 
+   $('#game-over').hide();
+
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
