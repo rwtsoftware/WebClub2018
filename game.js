@@ -21,7 +21,9 @@ var PickUpWoodButtonClick = function() {
   current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value - 10);
 };
-
+var setstartingvalue = function(){
+		 $('#Health-count-').text(10);
+}
 var onesecondtimer = function() {
   var current_value = Number.parseInt($('#second-timer-count').text());
   $('#second-timer-count').text(current_value + 1);
@@ -112,18 +114,25 @@ var DecreasewoodCount=function( ) {
 };
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
+    $('#gameover-div').css('visibility', 'visible');
+    $('#game-div').css('visibility', 'hidden');
    $('#game-over').show();
  $('#inventory-div').hide();
   $('#button-div').hide();
     $('#emoji-div').hide();
-
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
   $('#Health-count-').text(current_value2 - 1);
    return true;  
 };
+var restartgame=function( ) {
+	 setstartingvalue();
+	  $('#gameover-div').css('visibility', 'hidden');
+    $('#game-div').css('visibility', 'visible');
+}
 var setEventHandlers = function() {
+	$('#gameover-div').css('visibility', 'hidden');
   setInterval(changetimeofdayCounter, 30000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
@@ -133,8 +142,8 @@ var setEventHandlers = function() {
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
+  $('#restart-button').click(restartgame);
    $('#game-over').hide();
-
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
