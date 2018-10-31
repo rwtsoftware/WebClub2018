@@ -88,12 +88,13 @@ var Sellberriesbutton = function() {
  
 };
 var healthButtonClick = function() {
- if	(DecreaseBerryCount()){
-
-var current_value = Number.parseInt($('#Health-count-').text());
-	 $('#Health-count-').text(current_value + 2);
- }
-};
+  if	(DecreaseBerryCount()){
+    var current_value = Number.parseInt($('#Health-count-').text()); 
+     if (current_value<100){
+   
+    $('#Health-count-').text(current_value + 2);
+  }
+}
 var DecreaseBerryCount=function( ) {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
