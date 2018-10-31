@@ -90,9 +90,9 @@ var Sellberriesbutton = function() {
 var healthButtonClick = function() {
   if	(DecreaseBerryCount()){
     var current_value = Number.parseInt($('#Health-count-').text()); 
-     if (current_value<100){
-   
-    $('#Health-count-').text(current_value + 2);
+    if (current_value<100){
+      $('#Health-count-').text(current_value + 2);
+    }
   }
 }
 var DecreaseBerryCount=function( ) {
