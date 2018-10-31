@@ -2,7 +2,7 @@
 
 /*
 Todos:
-	Limit health to 100
+	change the background
 	Limit Berries
 	Add berries ready to be picked
 */
@@ -41,9 +41,10 @@ var collectberriesButtonClick = function() {
 } ;
 
 var changetimeofdayCounter= function() {
-  $('body').css('background-color', '#'+Math.floor($('#second-timer-count').text()/10)%10*111111);
+ if (Math.parseInt($('#second-timer-count').text()){
+   $('body').css('background-color','red');
+ }
 };
-
 var buildfire= function() {
   if(Number.parseInt($('#wood-collected-count').text()) <10){
     alert("no wood collected left");
