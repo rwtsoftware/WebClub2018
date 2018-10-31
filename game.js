@@ -41,7 +41,7 @@ var collectberriesButtonClick = function() {
 } ;
 
 var changetimeofdayCounter= function() {
- if (Math.parseInt($('#second-timer-count').text())>50){
+ if (Number.parseInt($('#second-timer-count').text())>50){
    $('body').css('background-color','red');
  }
 };
