@@ -135,7 +135,7 @@ var restartgame=function( ) {
 }
 var setEventHandlers = function() {
 	$('#gameover-div').css('visibility', 'hidden');
-  setInterval(changetimeofdayCounter, 30000);
+  setInterval(changetimeofdayCounter, 1000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
   $('#sell-wood').click(sellwood);
