@@ -1,3 +1,11 @@
+
+
+/*
+Todos:
+	Limit health to 100
+	Limit Berries
+	Add berries ready to be picked
+*/
 var PickUpWoodButtonClick = function() {
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
     alert("no wood found in forest");
@@ -43,9 +51,9 @@ var buildfire= function() {
   }
 
   current_value = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value - 10);
+  $('#wood-collected-count').text(current_value - 5);
 
-  $('body').append('&#x1f525;'); 
+  $('#emoji-div').append('&#x1f525;'); 
   var originalOpacity = $('#mouse-div').css("opacity");
   console.log(originalOpacity);
   $('#mouse-div').css("opacity", originalOpacity * .9);
@@ -108,6 +116,10 @@ var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
     $('#gameover-div').css('visibility', 'visible');
     $('#game-div').css('visibility', 'hidden');
+   $('#game-over').show();
+ $('#inventory-div').hide();
+  $('#button-div').hide();
+    $('#emoji-div').hide();
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Health-count-').text());
@@ -131,6 +143,7 @@ var setEventHandlers = function() {
   $('#collect-berries-button').click(collectberriesButtonClick);
  $('#sell-berries-button').click(Sellberriesbutton);
   $('#restart-button').click(restartgame);
+   $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
