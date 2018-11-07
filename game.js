@@ -107,7 +107,7 @@ var DecreaseBerryCount=function( ) {
 };
 var DecreasewoodCount=function(count) {
  if(Number.parseInt($('#wood-collected-count').text()) <count){
-    alert("no berries found in forest ");
+    alert("you are missing wood broke boy");
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#wood-collected-count').text());
@@ -116,7 +116,7 @@ var DecreasewoodCount=function(count) {
 };
 var DecreaseMoney=function(count) {
  if(Number.parseInt($('#Money-count').text()) <count){
-    alert("no berries found in forest ");
+    alert("you are missing big bucks");
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#Money-count').text());
