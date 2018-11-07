@@ -2,7 +2,7 @@
 
 /*
 Todos:
-	Limit health to 100
+	change the background
 	Limit Berries
 	Add berries ready to be picked
 */
@@ -41,9 +41,10 @@ var collectberriesButtonClick = function() {
 } ;
 
 var changetimeofdayCounter= function() {
-  $('body').css('background-color', '#'+Math.floor($('#second-timer-count').text()/10)%10*111111);
+ if (Number.parseInt($('#second-timer-count').text())>50){
+   $('body').css('background-color','red');
+ }
 };
-
 var buildfire= function() {
   if(Number.parseInt($('#wood-collected-count').text()) <10){
     alert("no wood collected left");
@@ -88,12 +89,13 @@ var Sellberriesbutton = function() {
  
 };
 var healthButtonClick = function() {
- if	(DecreaseBerryCount()){
-
-var current_value = Number.parseInt($('#Health-count-').text());
-	 $('#Health-count-').text(current_value + 2);
- }
-};
+  if	(DecreaseBerryCount()){
+    var current_value = Number.parseInt($('#Health-count-').text()); 
+    if (current_value<99){
+      $('#Health-count-').text(current_value + 2);
+    }
+  }
+}
 var DecreaseBerryCount=function( ) {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
@@ -133,7 +135,7 @@ var restartgame=function( ) {
 }
 var setEventHandlers = function() {
 	$('#gameover-div').css('visibility', 'hidden');
-  setInterval(changetimeofdayCounter, 30000);
+  setInterval(changetimeofdayCounter, 1000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
   $('#sell-wood').click(sellwood);
