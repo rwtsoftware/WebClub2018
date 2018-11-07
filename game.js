@@ -36,9 +36,11 @@ var berryAvailableCounter = function() {
   var current_value = Number.parseInt($('#berries-available-count').text());
   $('#berries-available-count').text(current_value + 1);
 };
+
+
 var collectberriesButtonClick = function() { 
 	 if(Number.parseInt($('#berries-available-count').text()) <10){
-    alert("no berries found");
+    alert("not enough berries available in forest");
     return;
   }
   
