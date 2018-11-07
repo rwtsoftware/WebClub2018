@@ -114,6 +114,9 @@ var DecreasewoodCount=function( ) {
   $('#wood-collected-count').text(current_value2 - 1);
    return true;  
 };
+var BuildCar=function(){
+	
+};
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
     $('#gameover-div').css('visibility', 'visible');
@@ -139,7 +142,7 @@ var setEventHandlers = function() {
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
   $('#sell-wood').click(sellwood);
-  $('#build-a-car-button').click(buildCar);
+  $('#build-a-car-button').click(BuildCar);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
