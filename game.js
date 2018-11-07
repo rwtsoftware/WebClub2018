@@ -76,7 +76,7 @@ var GetMoney = function() {
  
 };
 var sellwood=function() {
-  if(	DecreasewoodCount()){
+  if(	DecreasewoodCount(9)){
 		var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
@@ -105,13 +105,13 @@ var DecreaseBerryCount=function( ) {
   $('#berries-collected-count').text(current_value2 - 1);
    return true;  
 };
-var DecreasewoodCount=function( ) {
- if(Number.parseInt($('#wood-collected-count').text()) <1){
+var DecreasewoodCount=function(count) {
+ if(Number.parseInt($('#wood-collected-count').text()) <count){
     alert("no berries found in forest ");
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value2 - 1);
+  $('#wood-collected-count').text(current_value2 - count);
    return true;  
 };
 var BuildCar=function(){
