@@ -114,6 +114,15 @@ var DecreasewoodCount=function(count) {
   $('#wood-collected-count').text(current_value2 - count);
    return true;  
 };
+var DecreaseMoney=function(count) {
+ if(Number.parseInt($('#Money-count').text()) <count){
+    alert("no berries found in forest ");
+    return false ;
+}
+	 	var current_value2 = Number.parseInt($('#Money-count').text());
+  $('#Money-count').text(current_value2 - count);
+   return true;  
+};
 var BuildCar=function(){
 	 if(	DecreasewoodCount(9)){
 		var current_value = Number.parseInt($('#Money-count').text());
