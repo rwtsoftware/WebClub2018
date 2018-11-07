@@ -124,7 +124,7 @@ var DecreaseMoney=function(count) {
    return true;  
 };
 var BuildCar=function(){
-	 if(	DecreasewoodCount(9)){
+	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
 		var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
