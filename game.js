@@ -150,6 +150,7 @@ var setEventHandlers = function() {
   $('#restart-button').click(restartgame);
    $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
+  setInterval(berryAvailableCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
 };
