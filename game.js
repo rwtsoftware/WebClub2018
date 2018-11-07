@@ -37,8 +37,16 @@ var berryAvailableCounter = function() {
   $('#berries-available-count').text(current_value + 1);
 };
 var collectberriesButtonClick = function() { 
+	 if(Number.parseInt($('#berries-available-count').text()) <10){
+    alert("no berries found");
+    return;
+  }
+  
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10);
+  
+   current_value = Number.parseInt($('#berries-available-count').text());
+  $('#berries-available-count').text(current_value - 10);
 	
  $('#emoji-div').append('&#x1f347;');
 } ;
