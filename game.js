@@ -2,7 +2,7 @@
 
 /*
 Todos:
-	change the background
+	
 	Limit Berries
 	Add berries ready to be picked
 */
@@ -32,7 +32,10 @@ var fallenwoodCounter = function() {
   var current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value + 1);
 };
-
+var berryAvailableCounter = function() {
+  var current_value = Number.parseInt($('#berries-available-count').text());
+  $('#berries-available-count').text(current_value + 1);
+};
 var collectberriesButtonClick = function() { 
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10);
