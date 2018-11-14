@@ -55,7 +55,7 @@ var collectberriesButtonClick = function() {
 
 var changetimeofdayCounter= function() {
  if (Number.parseInt($('#second-timer-count').text())>50){
-   $('body').css('background-color','red');
+   $('body').css('background-color','#0B0826');
  }
 };
 var buildfire= function() {
