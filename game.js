@@ -89,7 +89,7 @@ var GetMoney = function() {
  
 };
 var sellwood=function() {
-  if(	DecreasewoodCount()){
+  if(	DecreasewoodCount(9)){
 		var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
@@ -118,14 +118,29 @@ var DecreaseBerryCount=function( ) {
   $('#berries-collected-count').text(current_value2 - 1);
    return true;  
 };
-var DecreasewoodCount=function( ) {
- if(Number.parseInt($('#wood-collected-count').text()) <1){
-    alert("no berries found in forest ");
+var DecreasewoodCount=function(count) {
+ if(Number.parseInt($('#wood-collected-count').text()) <count){
+    alert("you are missing wood broke boy");
     return false ;
 }
 	 	var current_value2 = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value2 - 1);
+  $('#wood-collected-count').text(current_value2 - count);
    return true;  
+};
+var DecreaseMoney=function(count) {
+ if(Number.parseInt($('#Money-count').text()) <count){
+    alert("you are missing big bucks");
+    return false ;
+}
+	 	var current_value2 = Number.parseInt($('#Money-count').text());
+  $('#Money-count').text(current_value2 - count);
+   return true;  
+};
+var BuildCar=function(){
+	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
+		var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 10);
+  }	
 };
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
@@ -152,6 +167,7 @@ var setEventHandlers = function() {
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
   $('#sell-wood').click(sellwood);
+  $('#build-a-car-button').click(BuildCar);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
