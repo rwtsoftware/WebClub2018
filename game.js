@@ -2,7 +2,7 @@
 
 /*
 Todos:
-	change the background
+	
 	Limit Berries
 	Add berries ready to be picked
 */
@@ -32,10 +32,23 @@ var fallenwoodCounter = function() {
   var current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value + 1);
 };
+var berryAvailableCounter = function() {
+  var current_value = Number.parseInt($('#berries-available-count').text());
+  $('#berries-available-count').text(current_value + 1);
+};
+
 
 var collectberriesButtonClick = function() { 
+	 if(Number.parseInt($('#berries-available-count').text()) <10){
+    alert("not enough berries available in forest");
+    return;
+  }
+  
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10);
+  
+   current_value = Number.parseInt($('#berries-available-count').text());
+  $('#berries-available-count').text(current_value - 10);
 	
  $('#emoji-div').append('&#x1f347;');
 } ;
@@ -147,6 +160,7 @@ var setEventHandlers = function() {
   $('#restart-button').click(restartgame);
    $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
+  setInterval(berryAvailableCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
 };
