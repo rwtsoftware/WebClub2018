@@ -141,8 +141,8 @@ var DecreaseMoney=function(count) {
 };
 var BuildCar=function(){
 	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
-		var current_value = Number.parseInt($('#Money-count').text());
-    $('#Money-count').text(current_value + 10);
+	 	$('#emoji-div').append('<img src="car.png">');
+
   }	
 };
 var Decreasehealth=function( ) {
