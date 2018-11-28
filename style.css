@@ -12,10 +12,10 @@
 	text-align:right;
 }
 body{
-	background-color:chrome;
+	background-color:green;
 }
 button{
-	border:pink;
+	border:dark green;
 	border-style:solid;
 	height:40px;
 	width:120px;
