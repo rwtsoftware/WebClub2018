@@ -55,8 +55,12 @@ var collectberriesButtonClick = function() {
 
 var changetimeofdayCounter= function() {
  if (Number.parseInt($('#second-timer-count').text())>50){
-   $('body').css('background-color','red');
+   $('body').css('background-color','#0B0826');
  }
+  if (Number.parseInt($('#second-timer-count').text())%10===0){
+    var originalOpacity = $('#mouse-div').css("opacity");
+    $('#mouse-div').css("opacity", originalOpacity * 1.1);
+  }
 };
 var buildfire= function() {
   if(Number.parseInt($('#wood-collected-count').text()) <10){
@@ -69,7 +73,6 @@ var buildfire= function() {
 
   $('#emoji-div').append('&#x1f525;'); 
   var originalOpacity = $('#mouse-div').css("opacity");
-  console.log(originalOpacity);
   $('#mouse-div').css("opacity", originalOpacity * .9);
 };
 
@@ -138,8 +141,8 @@ var DecreaseMoney=function(count) {
 };
 var BuildCar=function(){
 	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
-		var current_value = Number.parseInt($('#Money-count').text());
-    $('#Money-count').text(current_value + 10);
+	 	$('#emoji-div').append('<img src="car.png">');
+
   }	
 };
 var Decreasehealth=function( ) {
