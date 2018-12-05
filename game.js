@@ -53,9 +53,14 @@ var collectberriesButtonClick = function() {
  $('#emoji-div').append('&#x1f347;');
 } ;
 
-var changetimeofdayCounter= function() {
- if (Number.parseInt($('#second-timer-count').text())>50){
-   $('body').css('background-color','#0B0826');
+var changetimeofdayCounter= function() { 
+	var current_value = Number.parseInt($('#Health-count-').text()); 
+ if (current_value >= 67){
+   $('body').css('background-color','green');
+ } else if (current_value < 67 && current_value >= 34){
+ 	 $('body').css('background-color','yellow');
+ }else {
+ 	$('body').css('background-color','red');
  }
   var originalOpacity = $('#mouse-div').css("opacity");
   console.log(originalOpacity);
