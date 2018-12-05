@@ -53,8 +53,9 @@ var collectberriesButtonClick = function() {
  $('#emoji-div').append('&#x1f347;');
 } ;
 
-var changetimeofdayCounter= function() {
- if (Number.parseInt($('#second-timer-count').text())>50){
+var changetimeofdayCounter= function() { 
+	var current_value = Number.parseInt($('#Health-count-').text()); 
+ if (current_value){
    $('body').css('background-color','#0B0826');
  }
   var originalOpacity = $('#mouse-div').css("opacity");
