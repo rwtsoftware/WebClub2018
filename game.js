@@ -55,8 +55,10 @@ var collectberriesButtonClick = function() {
 
 var changetimeofdayCounter= function() { 
 	var current_value = Number.parseInt($('#Health-count-').text()); 
- if (current_value ){
+ if (current_value >= 67){
    $('body').css('background-color','green');
+ } else if (current_value >= 67){
+ 	
  }
   var originalOpacity = $('#mouse-div').css("opacity");
   console.log(originalOpacity);
