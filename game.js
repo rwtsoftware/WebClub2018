@@ -48,7 +48,7 @@ var collectberriesButtonClick = function() {
   $('#berries-collected-count').text(current_value + 10);
   
    current_value = Number.parseInt($('#berries-available-count').text());
-  $('#berries-available-count').text(current_value - 10);
+  $('#berries-available-count').text(current_value + 10);
 	
  $('#emoji-div').append('&#x1f347;');
 } ;
