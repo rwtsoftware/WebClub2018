@@ -57,8 +57,10 @@ var changetimeofdayCounter= function() {
 	var current_value = Number.parseInt($('#Health-count-').text()); 
  if (current_value >= 67){
    $('body').css('background-color','green');
- } else if (current_value >= 67){
- 	
+ } else if (current_value < 67 && current_value >= 34){
+ 	 $('body').css('background-color','yellow');
+ }else {
+ 	$('body').css('background-color','red');
  }
   var originalOpacity = $('#mouse-div').css("opacity");
   console.log(originalOpacity);
