@@ -40,30 +40,30 @@ var carAvailableCounter = function() {
   var current_value = Number.parseInt($('#cars-collected-count').text());
   $('#cars-collected-count').text(current_value + 1);
 };
+  }
 
 
 var collectberriesButtonClick = function() { 
 	 if(Number.parseInt($('#berries-available-count').text()) <10){
     alert("not enough berries available in forest");
     return;
-  }
   var car_value = Number.parseInt($('#cars-collected-count').text());
   
 	var current_value = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value + 10 + car_vaule);
+  $('#berries-collected-count').text(current_value + 10 + car_value);
   
    current_value = Number.parseInt($('#berries-available-count').text());
   $('#berries-available-count').text(current_value - 10);
+var changetimeofd
 	
  $('#emoji-div').append('&#x1f347;');
 } ;
-
-var changetimeofdayCounter= function() {
+ayCounter= function() {
  if (Number.parseInt($('#second-timer-count').text())>50){
-   $('body').css('background-color','#0B0826');
  }
   var originalOpacity = $('#mouse-div').css("opacity");
   console.log(originalOpacity);
+   $('body').css('background-color','#0B0826');
   $('#mouse-div').css("opacity", originalOpacity /.9); 
 };
 var buildfire= function() {
