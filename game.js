@@ -37,7 +37,7 @@ var berryAvailableCounter = function() {
   $('#berries-available-count').text(current_value + 1);
 };
 var carAvailableCounter = function() {
-  var current_value = Number.parseInt($('#berries-available-count').text());
+  var current_value = Number.parseInt($('#car-available-count').text());
   $('#car-available-count').text(current_value + 1);
 };
 
