@@ -40,7 +40,7 @@ var carAvailableCounter = function() {
   var current_value = Number.parseInt($('#cars-collected-count').text());
   $('#cars-collected-count').text(current_value + 1);
 };
-  }
+  
 
 
 var collectberriesButtonClick = function() { 
