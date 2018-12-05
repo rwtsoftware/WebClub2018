@@ -144,6 +144,7 @@ var DecreaseMoney=function(count) {
 };
 var BuildCar=function(){
 	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
+	 	carAvailableCounter();
 	 	$('#emoji-div').append('<img src="car.png">');
 
   }	
