@@ -36,6 +36,10 @@ var berryAvailableCounter = function() {
   var current_value = Number.parseInt($('#berries-available-count').text());
   $('#berries-available-count').text(current_value + 1);
 };
+var carAvailableCounter = function() {
+  var current_value = Number.parseInt($('#cars-collected-count').text());
+  $('#cars-collected-count').text(current_value + 1);
+};
 
 
 var collectberriesButtonClick = function() { 
@@ -43,9 +47,10 @@ var collectberriesButtonClick = function() {
     alert("not enough berries available in forest");
     return;
   }
+  var car_value = Number.parseInt($('#cars-collected-count').text());
   
 	var current_value = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value + 10);
+  $('#berries-collected-count').text(current_value + 10 + car_value);
   
    current_value = Number.parseInt($('#berries-available-count').text());
   $('#berries-available-count').text(current_value - 10);
@@ -145,6 +150,7 @@ var DecreaseMoney=function(count) {
 };
 var BuildCar=function(){
 	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
+	 	carAvailableCounter();
 	 	$('#emoji-div').append('<img src="car.png">');
 
   }	
