@@ -1,6 +1,14 @@
 
 var myMap = {};
 
+
+var draw = function(myMap) {
+  for (let k in myMap.objects) {
+    let o = myMap.objects[k];
+    $(myMap.window).children('.'+o.id).css({top: (o.y * myMap.picture_size) + 'px', left: (o.x * myMap.picture_size) + 'px'});
+  }
+};
+
 var scroller = {  
   newMap: function(window) {
   	myMap = {
@@ -28,13 +36,6 @@ var scroller = {
   	myMap.failureCallback = callback;
   },
 
-  draw: function() {
-  	for (let k in myMap.objects) {
-  	  let o = myMap.objects[k];
-  	  $(myMap.window).children('.'+o.id).css({top: (o.y * myMap.picture_size) + 'px', left: (o.x * myMap.picture_size) + 'px'});
-  	}
-  },
-
   run: function() {
     $(myMap.window).css({position: 'relative', height: '80px', width: '200px', 'background-color': 'gray'}).html('');
   	for (let k in myMap.objects) {
@@ -57,7 +58,7 @@ var scroller = {
           stillRunning = true;
         }
       }
-      this.draw();
+      this.draw(myMap);
       if (!stillRunning) {
       	clearInterval(myMap.interval);
       	setTimeout(function() {
