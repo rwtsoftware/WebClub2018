@@ -4,6 +4,7 @@ var myMap = {};
 
 var draw = function(myMap) {
   for (let k in myMap.objects) {
+  	console.log('here');
     let o = myMap.objects[k];
     $(myMap.window).children('.'+o.id).css({top: (o.y * myMap.picture_size) + 'px', left: (o.x * myMap.picture_size) + 'px'});
   }
