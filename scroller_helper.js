@@ -1,5 +1,5 @@
 
-var myMap = {};
+var myMap = undefined;
 
 
 var draw = function(myMap) {
@@ -32,19 +32,24 @@ var collisionDetect = function(myMap) {
 
 var scroller = {  
   newMap: function(window, html) {
-  	myMap = {
-  	  objects: [],
-  	  picture_size: '20',
-  	  visible_width: '20',
-  	  visible_height: '5',
-  	  player: {x: 0, y: 0, html: html},
-  	  window: window,
-  	  successCallback: null,
-  	  failureCallback: null,
-  	  fail: function() {
-        this.objects = [];
-        this.failureCallback();
+  	if (typeof myMap === undefined) {
+  	  myMap = {
+  	    objects: [],
+  	    picture_size: '20',
+  	    visible_width: '20',
+  	    visible_height: '5',
+  	    player: {x: 0, y: 0, html: html},
+  	    window: window,
+  	    successCallback: null,
+  	    failureCallback: null,
+  	    fail: function() {
+          this.objects = [];
+          this.failureCallback();
+  	    }
   	  }
+  	}
+  	else {
+  	  alert('already running');
   	}
   },
   
@@ -118,11 +123,10 @@ var scroller = {
       this.draw(myMap);
       if (!stillRunning) {
       	clearInterval(myMap.interval);
-      	setTimeout(function() {
-      	  if (myMap.successCallback) {
-      	    myMap.successCallback();
-      	  }
-      	});
+       if (myMap.successCallback) {
+          myMap.successCallback();
+      	}
+      	myMap = undefined;
       }
     }, 1000);
   }
