@@ -37,21 +37,21 @@ var scroller = {
   run: function() {
     $(this.map.window).css({position: 'relative'});
   	for (let o in this.map.objects) {
-  	  $(this.map.window).append(o.html).addClass(o.id).css({top: o.y * this.map.picture_size, left: o.x * this.map.picture_size, position: 'absolute'});
+  	  $(this.map.window).append(o.html).addClass(o.id).css({top: (o.y * this.map.picture_size) + 'px', left: (o.x * this.map.picture_size) + 'px', position: 'absolute'});
   	}
-    map.interval = setInterval(function() {
-      stillRunning = false;
-      for (let o in map.objects) {
+    this.map.interval = setInterval(function() {
+      let stillRunning = false;
+      for (let o in this.map.objects) {
         o.x--;
         if (o.x >1) {
           stillRunning = true;
         }
       }
       if (!stillRunning) {
-      	clearInterval(map.interval);
+      	clearInterval(this.map.interval);
       	setTimeout(function() {
-      	  if (map.successCallback) {
-      	    map.successCallback();
+      	  if (this.map.successCallback) {
+      	    this.map.successCallback();
       	  }
       	});
       }
