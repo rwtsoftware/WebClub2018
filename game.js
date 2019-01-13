@@ -1,4 +1,3 @@
-import {scroller} from './scroller_helper';
 
 /*
 Todos:
