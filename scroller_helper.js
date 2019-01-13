@@ -61,7 +61,7 @@ var scroller = {
       let stillRunning = false;
       for (let k in myMap.objects) {
         myMap.objects[k].x--;
-        if (myMap.objects[k].x > 0) {
+        if (myMap.objects[k].x > -2) {
           stillRunning = true;
         }
       }
