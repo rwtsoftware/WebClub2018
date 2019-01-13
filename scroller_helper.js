@@ -1,11 +1,11 @@
 var scroller = {
   
   map: {},
-  picture_size: '20px',
   
   newMap: function(window) {
-  	map = {
+  	this.map = {
   	  objects: [],
+  	  picture_size: '20px',
   	  window: window,
   	  successCallback: null,
   	  failureCallback: null,
@@ -17,27 +17,27 @@ var scroller = {
   },
   
   addObject: function(x, y, html) {
-  	map.objects.push({x: x, y: y, html: html, id: map.objects.length});
+  	this.map.objects.push({x: x, y: y, html: html, id: map.objects.length});
   },
 
   onSuccess: function(callback) {
-  	map.successCallback = callback;
+  	this.map.successCallback = callback;
   },
 
   onFailure: function(callback) {
-  	map.failureCallback = callback;
+  	this.map.failureCallback = callback;
   },
 
   draw: function() {
-  	for (let o in map.objects) {
-  	  $(map.window).children('.'+o.id).css({top: o.y * picture_size, left: o.x * picture_size});
+  	for (let o in this.map.objects) {
+  	  $(this.map.window).children('.'+o.id).css({top: (o.y * picture_size) + 'px', left: (o.x * picture_size) + 'px'});
   	}
   },
 
   run: function() {
-    $(map.window).css({position: 'relative'});
-  	for (let o in map.objects) {
-  	  $(map.window).append(o.html).addClass(o.id).css({top: o.y * picture_size, left: o.x * picture_size, position: 'absolute'});
+    $(this.map.window).css({position: 'relative'});
+  	for (let o in this.map.objects) {
+  	  $(this.map.window).append(o.html).addClass(o.id).css({top: o.y * this.map.picture_size, left: o.x * this.map.picture_size, position: 'absolute'});
   	}
     map.interval = setInterval(function() {
       stillRunning = false;
