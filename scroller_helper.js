@@ -17,7 +17,8 @@ var drawPlayer = function(myMap) {
   $(myMap.window).children('.player').css({
   	top: (myMap.player.y * myMap.picture_size) + 'px',
   	left: (myMap.player.x * myMap.picture_size) + 'px'
-  });	
+  });
+  console.log(myMap.player);
 }
 
 var scroller = {  
@@ -77,6 +78,7 @@ var scroller = {
 	      if (event.which === 39) {
 	        myMap.player.x++;
 	      }
+	      console.log(myMap.player);
 	      drawPlayer(myMap);
 	    })
     $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>')
