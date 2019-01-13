@@ -59,24 +59,25 @@ var scroller = {
       overflow: 'hidden',
       'z-index': -1
     })
-    .attr('tabindex', '0')
-    .html('')
-    .keypress(function( event ) {
-      if (event.which === 38) {
-        myMap.player.y--;
-      }
-       if (event.which === 40) {
-        myMap.player.y++;
-      }
-      if (event.which === 37) {
-        myMap.player.x--;
-      }
-      if (event.which === 39) {
-        myMap.player.x++;
-      }
-      drawPlayer(myMap);
-    })
-    .focus();
+	    .attr('tabindex', '0')
+	    .html('')
+	    .keypress(function( event ) {
+	      if (event.which === 38) {
+	        myMap.player.y--;
+	      }
+	       if (event.which === 40) {
+	        myMap.player.y++;
+	      }
+	      if (event.which === 37) {
+	        myMap.player.x--;
+	      }
+	      if (event.which === 39) {
+	        myMap.player.x++;
+	      }
+	      drawPlayer(myMap);
+	    })
+	    .focus();
+    $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>');
   	for (let k in myMap.objects) {
   	  let o = myMap.objects[k];
   	  $(myMap.window).append('<div class="'+o.id+'">'+o.html+'</div>');
