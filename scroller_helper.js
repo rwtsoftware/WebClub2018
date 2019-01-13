@@ -29,7 +29,8 @@ var scroller = {
   },
 
   draw: function() {
-  	for (let o in myMap.objects) {
+  	for (let k in myMap.objects) {
+  	  let o = myMap.objects[k];
   	  $(myMap.window).children('.'+o.id).css({top: (o.y * myMap.picture_size) + 'px', left: (o.x * myMap.picture_size) + 'px'});
   	}
   },
@@ -50,9 +51,9 @@ var scroller = {
   	}
     myMap.interval = setInterval(function() {
       let stillRunning = false;
-      for (let o in myMap.objects) {
-        o.x--;
-        if (o.x >1) {
+      for (let k in myMap.objects) {
+        myMap.objects[k].x--;
+        if (myMap.objects[k].x > 0) {
           stillRunning = true;
         }
       }
