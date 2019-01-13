@@ -1,4 +1,4 @@
-
+var scroller = require('./scroller_helper.js')();
 
 /*
 Todos:
@@ -174,6 +174,13 @@ var restartgame=function( ) {
 	  $('#gameover-div').css('visibility', 'hidden');
     $('#game-div').css('visibility', 'visible');
 }
+
+var runMap() {
+  scroller.newMap($('#road-div'));
+  scroller.addObject(4,1,'&#x1f347;');
+  scroller.addObject(6,2,'&#x1f347;');
+}
+
 var setEventHandlers = function() {
 	$('#gameover-div').css('visibility', 'hidden');
   setInterval(changetimeofdayCounter, 1000);
@@ -192,6 +199,7 @@ var setEventHandlers = function() {
   setInterval(berryAvailableCounter,1000);
   setSpotlightTracking();
     $('#Health').click(healthButtonClick);
+  runMap();
 };
 $( document ).ready(function() {
   setEventHandlers();
