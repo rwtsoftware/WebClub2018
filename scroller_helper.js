@@ -64,6 +64,7 @@ var scroller = {
 	    .focus();
 	$(window)
 	    .keypress(function( event ) {
+	    	console.log(event);
 	      if (event.which === 38) {
 	        myMap.player.y--;
 	      }
