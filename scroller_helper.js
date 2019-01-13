@@ -49,7 +49,7 @@ var scroller = {
     $(myMap.window).css({
       position: 'relative',
       height: (myMap.picture_size * myMap.visible_height) + 'px',
-      width: (myMap.picture_size * myMap.visible_width)  'px',
+      width: (myMap.picture_size * myMap.visible_width) + 'px',
       'background-color': 'gray',
       overflow: 'hidden',
       'z-index': -1
