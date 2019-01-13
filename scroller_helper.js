@@ -35,7 +35,7 @@ var scroller = {
   },
 
   run: function() {
-    $(this.map.window).css({position: 'relative', height: '80px', width: '200px', background-color: 'gray'});
+    $(this.map.window).css({position: 'relative', height: '80px', width: '200px', 'background-color': 'gray'});
   	for (let o in this.map.objects) {
   	  $(this.map.window).append('<div>'+o.html+'</div>').addClass(o.id).css({top: (o.y * this.map.picture_size) + 'px', left: (o.x * this.map.picture_size) + 'px', position: 'absolute'});
   	}
