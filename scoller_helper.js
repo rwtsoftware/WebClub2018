@@ -4,7 +4,7 @@ module.exports = function() {
   let map = {};
   let picture_size = '20px';
   
-  module.newMap = function(length, window) {
+  module.newMap = function(window) {
   	map = {
   	  objects: [],
   	  window: window,
