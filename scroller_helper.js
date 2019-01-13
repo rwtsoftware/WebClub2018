@@ -37,7 +37,7 @@ var scroller = {
   run: function() {
     $(this.map.window).css({position: 'relative'});
   	for (let o in this.map.objects) {
-  	  $(this.map.window).append(o.html).addClass(o.id).css({top: (o.y * this.map.picture_size) + 'px', left: (o.x * this.map.picture_size) + 'px', position: 'absolute'});
+  	  $(this.map.window).append('<div>'+o.html+'</div>').addClass(o.id).css({top: (o.y * this.map.picture_size) + 'px', left: (o.x * this.map.picture_size) + 'px', position: 'absolute'});
   	}
     this.map.interval = setInterval(function() {
       let stillRunning = false;
