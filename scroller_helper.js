@@ -21,6 +21,8 @@ var scroller = {
   	myMap = {
   	  objects: [],
   	  picture_size: '20',
+  	  visible_width: '20',
+  	  visible_height: '5',
   	  window: window,
   	  successCallback: null,
   	  failureCallback: null,
@@ -46,8 +48,8 @@ var scroller = {
   run: function() {
     $(myMap.window).css({
       position: 'relative',
-      height: '80px',
-      width: '200px',
+      height: (myMap.picture_size * myMap.visible_height) + 'px',
+      width: (myMap.picture_size * myMap.visible_width)  'px',
       'background-color': 'gray',
       overflow: 'hidden',
       'z-index': -1
