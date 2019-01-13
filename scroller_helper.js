@@ -1,9 +1,9 @@
-var scroller = {
-  
-  map: {},
-  
+
+var myMap = {};
+
+var scroller = {  
   newMap: function(window) {
-  	this.map = {
+  	myMap = {
   	  objects: [],
   	  picture_size: '20px',
   	  window: window,
@@ -17,41 +17,41 @@ var scroller = {
   },
   
   addObject: function(x, y, html) {
-  	this.map.objects.push({x: x, y: y, html: html, id: this.map.objects.length});
+  	myMap.objects.push({x: x, y: y, html: html, id: myMap.objects.length});
   },
 
   onSuccess: function(callback) {
-  	this.map.successCallback = callback;
+  	myMap.successCallback = callback;
   },
 
   onFailure: function(callback) {
-  	this.map.failureCallback = callback;
+  	myMap.failureCallback = callback;
   },
 
   draw: function() {
-  	for (let o in this.map.objects) {
-  	  $(this.map.window).children('.'+o.id).css({top: (o.y * picture_size) + 'px', left: (o.x * picture_size) + 'px'});
+  	for (let o in myMap.objects) {
+  	  $(myMap.window).children('.'+o.id).css({top: (o.y * myMap.picture_size) + 'px', left: (o.x * myMap.picture_size) + 'px'});
   	}
   },
 
   run: function() {
-    $(this.map.window).css({position: 'relative', height: '80px', width: '200px', 'background-color': 'gray'});
-  	for (let o in this.map.objects) {
-  	  $(this.map.window).append('<div>'+o.html+'</div>').addClass(o.id).css({top: (o.y * this.map.picture_size) + 'px', left: (o.x * this.map.picture_size) + 'px', position: 'absolute'});
+    $(myMap.window).css({position: 'relative', height: '80px', width: '200px', 'background-color': 'gray'});
+  	for (let o in myMap.objects) {
+  	  $(myMap.window).append('<div>'+o.html+'</div>').addClass(o.id).css({top: (o.y * myMap.picture_size) + 'px', left: (o.x * myMap.picture_size) + 'px', position: 'absolute'});
   	}
-    this.map.interval = setInterval(function() {
+    myMap.interval = setInterval(function() {
       let stillRunning = false;
-      for (let o in this.map.objects) {
+      for (let o in myMap.objects) {
         o.x--;
         if (o.x >1) {
           stillRunning = true;
         }
       }
       if (!stillRunning) {
-      	clearInterval(this.map.interval);
+      	clearInterval(myMap.interval);
       	setTimeout(function() {
-      	  if (this.map.successCallback) {
-      	    this.map.successCallback();
+      	  if (myMap.successCallback) {
+      	    myMap.successCallback();
       	  }
       	});
       }
