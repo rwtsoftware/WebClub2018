@@ -1,10 +1,9 @@
-module.exports = function() {
-  let module = {};
+var scroller = {
   
-  let map = {};
-  let picture_size = '20px';
+  map: {},
+  picture_size: '20px',
   
-  module.newMap = function(window) {
+  newMap: function(window) {
   	map = {
   	  objects: [],
   	  window: window,
@@ -15,27 +14,27 @@ module.exports = function() {
         this.failureCallback();
   	  }
   	}
-  }
+  },
   
-  module.addObject = function(x, y, html) {
+  addObject: function(x, y, html) {
   	map.objects.push({x: x, y: y, html: html, id: map.objects.length});
-  }
+  },
 
-  module.onSuccess = function(callback) {
+  onSuccess: function(callback) {
   	map.successCallback = callback;
-  }
+  },
 
-  module.onSuccess = function(callback) {
+  onFailure: function(callback) {
   	map.failureCallback = callback;
-  }
+  },
 
-  let draw = function() {
+  draw: function() {
   	for (let o in map.objects) {
   	  $(map.window).children('.'+o.id).css({top: o.y * picture_size, left: o.x * picture_size});
   	}
-  }
+  },
 
-  module.run = function() {
+  run: function() {
     $(map.window).css({position: 'relative'});
   	for (let o in map.objects) {
   	  $(map.window).append(o.html).addClass(o.id).css({top: o.y * picture_size, left: o.x * picture_size, position: 'absolute'});
@@ -58,6 +57,4 @@ module.exports = function() {
       }
     }, 1000);
   }
-
-  return module;	
 };
