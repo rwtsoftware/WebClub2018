@@ -81,8 +81,8 @@ var scroller = {
 	      console.log(myMap.player);
 	      drawPlayer(myMap);
 	    })
-    $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>')
-      .css({
+    $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>');
+    $(myMap.window).children('.player').css({
       	width: myMap.picture_size + 'px',
   	  	height: myMap.picture_size + 'px',
   	  	top: (myMap.player.y * myMap.picture_size) + 'px',
