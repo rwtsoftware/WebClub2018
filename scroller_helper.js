@@ -8,6 +8,7 @@ var draw = function(myMap) {
     let o = myMap.objects[k];
     console.log(o);
     console.log($(myMap.window).children('.'+o.id));
+    console.log(o.y * myMap.picture_size);
     $(myMap.window).children('.'+o.id).css({
       top: (o.y * myMap.picture_size) + 'px',
       left: (o.x * myMap.picture_size) + 'px'
@@ -19,7 +20,7 @@ var scroller = {
   newMap: function(window) {
   	myMap = {
   	  objects: [],
-  	  picture_size: '20px',
+  	  picture_size: '20',
   	  window: window,
   	  successCallback: null,
   	  failureCallback: null,
