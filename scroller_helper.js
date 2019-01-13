@@ -66,16 +66,16 @@ var scroller = {
 	$(window)
 	    .keypress(function( event ) {
 	    	console.log(event);
-	      if (event.which === 38) {
+	      if (event.key === 'w') {
 	        myMap.player.y--;
 	      }
-	       if (event.which === 115) {
+	       if (event.key === 's') {
 	        myMap.player.y++;
 	      }
-	      if (event.which === 37) {
+	      if (event.key === 'a') {
 	        myMap.player.x--;
 	      }
-	      if (event.which === 39) {
+	      if (event.key === 'd') {
 	        myMap.player.x++;
 	      }
 	      console.log(myMap.player);
