@@ -151,13 +151,15 @@ var DecreaseMoney=function(count) {
   $('#Money-count').text(current_value2 - count);
    return true;  
 };
-var BuildCar=function(){
-	 if(DecreaseMoney(2) && DecreasewoodCount(9)){
-	 	carAvailableCounter();
-	 	$('#emoji-div').append('<img src="car.png">');
 
+var BuildCar=function(){
+  if(DecreaseMoney(2) && DecreasewoodCount(9)){
+	carAvailableCounter();
+	$('#emoji-div').append('<img src="car.png">');
+    runMap();
   }	
 };
+
 var Decreasehealth=function( ) {
  if(Number.parseInt($('#Health-count-').text()) <1){
     $('#gameover-div').css('visibility', 'visible');
