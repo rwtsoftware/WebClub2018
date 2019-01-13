@@ -32,7 +32,7 @@ var collisionDetect = function(myMap) {
 
 var scroller = {  
   newMap: function(window, html) {
-  	if (typeof myMap === undefined) {
+  	if (typeof myMap === 'undefined') {
   	  myMap = {
   	    objects: [],
   	    picture_size: '20',
