@@ -49,6 +49,7 @@ var scroller = {
           stillRunning = true;
         }
       }
+      this.draw();
       if (!stillRunning) {
       	clearInterval(myMap.interval);
       	setTimeout(function() {
