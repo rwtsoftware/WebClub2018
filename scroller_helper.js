@@ -53,7 +53,8 @@ var scroller = {
   	  	height: myMap.picture_size + 'px',
   	  	top: (o.y * myMap.picture_size) + 'px',
   	  	left: (o.x * myMap.picture_size) + 'px',
-  	  	position: 'absolute'
+  	  	position: 'absolute',
+  	  	overflow: 'hidden'
   	  });
   	}
     myMap.interval = setInterval(function() {
