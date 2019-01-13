@@ -86,7 +86,7 @@ var scroller = {
   	  	top: (myMap.player.y * myMap.picture_size) + 'px',
   	  	left: (myMap.player.x * myMap.picture_size) + 'px',
   	  	position: 'absolute'
-      })
+      });
   	for (let k in myMap.objects) {
   	  let o = myMap.objects[k];
   	  $(myMap.window).append('<div class="'+o.id+'">'+o.html+'</div>');
