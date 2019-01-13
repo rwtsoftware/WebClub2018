@@ -65,7 +65,7 @@ var scroller = {
 	      if (event.which === 38) {
 	        myMap.player.y--;
 	      }
-	       if (event.which === 40) {
+	       if (event.which === 40 || event.which === 83) {
 	        myMap.player.y++;
 	      }
 	      if (event.which === 37) {
