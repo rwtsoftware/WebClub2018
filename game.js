@@ -179,6 +179,7 @@ var runMap() {
   scroller.newMap($('#road-div'));
   scroller.addObject(4,1,'&#x1f347;');
   scroller.addObject(6,2,'&#x1f347;');
+  scroller.run();
 }
 
 var setEventHandlers = function() {
