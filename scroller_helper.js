@@ -44,7 +44,14 @@ var scroller = {
   },
 
   run: function() {
-    $(myMap.window).css({position: 'relative', height: '80px', width: '200px', 'background-color': 'gray'}).html('');
+    $(myMap.window).css({
+      position: 'relative',
+      height: '80px',
+      width: '200px',
+      'background-color': 'gray',
+      overflow: 'hidden',
+      z-index: -1
+    }).html('');
   	for (let k in myMap.objects) {
   	  let o = myMap.objects[k];
   	  $(myMap.window).append('<div class="'+o.id+'">'+o.html+'</div>');
@@ -53,8 +60,7 @@ var scroller = {
   	  	height: myMap.picture_size + 'px',
   	  	top: (o.y * myMap.picture_size) + 'px',
   	  	left: (o.x * myMap.picture_size) + 'px',
-  	  	position: 'absolute',
-  	  	overflow: 'hidden'
+  	  	position: 'absolute'
   	  });
   	}
     myMap.interval = setInterval(function() {
