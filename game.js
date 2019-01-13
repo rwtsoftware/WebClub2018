@@ -1,4 +1,4 @@
-var scroller = require('./scroller_helper.js')();
+import {scroller} from './scroller_helper';
 
 /*
 Todos:
