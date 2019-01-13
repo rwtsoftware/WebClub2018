@@ -4,25 +4,30 @@ var myMap = {};
 
 var draw = function(myMap) {
   for (let k in myMap.objects) {
-  	console.log('here2');
     let o = myMap.objects[k];
-    console.log(o);
-    console.log($(myMap.window).children('.'+o.id));
-    console.log(o.y * myMap.picture_size);
     $(myMap.window).children('.'+o.id).css({
       top: (o.y * myMap.picture_size) + 'px',
       left: (o.x * myMap.picture_size) + 'px'
     });
   }
+  drawPlayer(myMap);
 };
 
+var drawPlayer = function(myMap) {
+  $(myMap.window).children('.player').css({
+  	top: (myMap.player.y * myMap.picture_size) + 'px',
+  	left: (myMap.player.x * myMap.picture_size) + 'px'
+  });	
+}
+
 var scroller = {  
-  newMap: function(window) {
+  newMap: function(window, html) {
   	myMap = {
   	  objects: [],
   	  picture_size: '20',
   	  visible_width: '20',
   	  visible_height: '5',
+  	  player: {x: 0, y: 0, html: html},
   	  window: window,
   	  successCallback: null,
   	  failureCallback: null,
@@ -53,7 +58,25 @@ var scroller = {
       'background-color': 'gray',
       overflow: 'hidden',
       'z-index': -1
-    }).html('');
+    })
+    .attr('tabindex', '0')
+    .html('')
+    .keypress(function( event ) {
+      if (event.which === 38) {
+        myMap.player.y--;
+      }
+       if (event.which === 40) {
+        myMap.player.y++;
+      }
+      if (event.which === 37) {
+        myMap.player.x--;
+      }
+      if (event.which === 39) {
+        myMap.player.x++;
+      }
+      drawPlayer(myMap);
+    })
+    .focus();
   	for (let k in myMap.objects) {
   	  let o = myMap.objects[k];
   	  $(myMap.window).append('<div class="'+o.id+'">'+o.html+'</div>');
