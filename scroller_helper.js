@@ -17,7 +17,7 @@ var scroller = {
   },
   
   addObject: function(x, y, html) {
-  	this.map.objects.push({x: x, y: y, html: html, id: map.objects.length});
+  	this.map.objects.push({x: x, y: y, html: html, id: this.map.objects.length});
   },
 
   onSuccess: function(callback) {
