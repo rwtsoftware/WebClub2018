@@ -18,7 +18,16 @@ var drawPlayer = function(myMap) {
   	top: (myMap.player.y * myMap.picture_size) + 'px',
   	left: (myMap.player.x * myMap.picture_size) + 'px'
   });
-  console.log(myMap.player);
+  collisionDetect(myMap);
+}
+
+var collisionDetect = function(myMap) {
+  for (let k in myMap.objects) {
+    let o = myMap.objects[k];
+    if (myMap.player.x === o.x && myMap.player.y === o.y) {
+    	o.callback();
+    }
+  }
 }
 
 var scroller = {  
@@ -39,8 +48,8 @@ var scroller = {
   	}
   },
   
-  addObject: function(x, y, html) {
-  	myMap.objects.push({x: x, y: y, html: html, id: myMap.objects.length});
+  addObject: function(x, y, html, callback) {
+  	myMap.objects.push({x: x, y: y, html: html, callback: callback, id: myMap.objects.length});
   },
 
   onSuccess: function(callback) {
@@ -65,7 +74,6 @@ var scroller = {
 	    .focus();
 	$(window)
 	    .keypress(function( event ) {
-	    	console.log(event);
 	      if (event.key === 'w') {
 	        myMap.player.y--;
 	      }
@@ -78,7 +86,6 @@ var scroller = {
 	      if (event.key === 'd') {
 	        myMap.player.x++;
 	      }
-	      console.log(myMap.player);
 	      drawPlayer(myMap);
 	    })
     $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>');
@@ -101,7 +108,6 @@ var scroller = {
   	  });
   	}
     myMap.interval = setInterval(function() {
-    	console.log('here');
       let stillRunning = false;
       for (let k in myMap.objects) {
         myMap.objects[k].x--;
