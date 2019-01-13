@@ -67,10 +67,14 @@ var changetimeofdayCounter= function() {
  }else {
  	$('body').css('background-color','red');
  }
-  var originalOpacity = $('#mouse-div').css("opacity");
-  console.log(originalOpacity);
-  $('#mouse-div').css("opacity", originalOpacity /.9); 
+  fireDieDown();
 };
+
+var fireDieDown = function() {
+  var originalOpacity = $('#mouse-div').css("opacity");
+  $('#mouse-div').css("opacity", originalOpacity /.99); 
+}
+
 var buildfire= function() {
   if(Number.parseInt($('#wood-collected-count').text()) <10){
     alert("no wood collected left");
