@@ -39,7 +39,7 @@ var scroller = {
   	for (let k in myMap.objects) {
   		let o = myMap.objects[k];
   		console.log(o);
-  	  $(myMap.window).append('<div class="'+o.id+'">'+o.html+'</div>')
+  	  $(myMap.window).append('<div class="'+o.id+'">'+o.html+'</div>');
   	  $(myMap.window).children('.'+o.id).css({
   	  	width: myMap.picture_size + 'px',
   	  	height: myMap.picture_size + 'px',
