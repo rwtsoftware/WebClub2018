@@ -61,6 +61,8 @@ var scroller = {
     })
 	    .attr('tabindex', '0')
 	    .html('')
+	    .focus();
+	$(window)
 	    .keypress(function( event ) {
 	      if (event.which === 38) {
 	        myMap.player.y--;
@@ -76,7 +78,6 @@ var scroller = {
 	      }
 	      drawPlayer(myMap);
 	    })
-	    .focus();
     $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>');
   	for (let k in myMap.objects) {
   	  let o = myMap.objects[k];
