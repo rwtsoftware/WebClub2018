@@ -50,7 +50,7 @@ var scroller = {
       width: '200px',
       'background-color': 'gray',
       overflow: 'hidden',
-      z-index: -1
+      'z-index': -1
     }).html('');
   	for (let k in myMap.objects) {
   	  let o = myMap.objects[k];
