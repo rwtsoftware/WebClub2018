@@ -166,35 +166,48 @@ var healthButtonClick = function() {
 };
 
 var DecreaseBerryCount=function( ) {
- if(Number.parseInt($('#berries-collected-count').text()) <1){
+  // If berries collected count is less then 1 alert and return failure
+  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
-    return false ;
-}
-	 	var current_value2 = Number.parseInt($('#berries-collected-count').text());
+    return false;
+  }
+
+  // Decrease berries by 1 and return success
+  var current_value2 = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value2 - 1);
-   return true;  
+  return true;  
 };
+
 var DecreasewoodCount=function(count) {
- if(Number.parseInt($('#wood-collected-count').text()) <count){
+  // If wood collected count  is less the parameter then alert and return failure
+  if(Number.parseInt($('#wood-collected-count').text()) <count){
     alert("you are missing wood broke boy");
     return false ;
-}
-	 	var current_value2 = Number.parseInt($('#wood-collected-count').text());
+  }
+
+  // Decrease wood collected count by parameter and return success
+  var current_value2 = Number.parseInt($('#wood-collected-count').text());
   $('#wood-collected-count').text(current_value2 - count);
-   return true;  
+  return true;  
 };
+
+
 var DecreaseMoney=function(count) {
- if(Number.parseInt($('#Money-count').text()) <count){
+  // If money count is less then parameter then alert and reutn failure
+  if(Number.parseInt($('#Money-count').text()) <count){
     alert("you are missing big bucks");
     return false ;
-}
+  }
+
+  // Decrease money count by parameter and return success
 	 	var current_value2 = Number.parseInt($('#Money-count').text());
   $('#Money-count').text(current_value2 - count);
-   return true;  
+  return true;  
 };
 
 var BuildCar=function(){
-  if(DecreaseMoney(2) && DecreasewoodCount(9)){
+  // If decrease money and wood successful then add car and drive
+  if(DecreaseMoney(2) && DecreasewoodCount(9)) {
 	carAvailableCounter();
 	$('#emoji-div').append('<img src="car.png">');
     runMap();
@@ -202,34 +215,41 @@ var BuildCar=function(){
 };
 
 var Decreasehealth=function( ) {
- if(Number.parseInt($('#Health-count-').text()) <1){
+  // if no more health out end game and return failure
+  if (Number.parseInt($('#Health-count-').text()) <1) {
     $('#gameover-div').css('visibility', 'visible');
     $('#game-div').css('visibility', 'hidden');
-   $('#game-over').show();
- $('#inventory-div').hide();
-  $('#button-div').hide();
+    $('#game-over').show();
+    $('#inventory-div').hide();
+    $('#button-div').hide();
     $('#emoji-div').hide();
     return false ;
-}
-	 	var current_value2 = Number.parseInt($('#Health-count-').text());
+  }
+
+  // Decrease health by 1 and return success
+  var current_value2 = Number.parseInt($('#Health-count-').text());
   $('#Health-count-').text(current_value2 - 1);
-   return true;  
+  return true;  
 };
+
 var restartgame=function( ) {
-	 setstartingvalue();
-	  $('#gameover-div').css('visibility', 'hidden');
-    $('#game-div').css('visibility', 'visible');
-}
+  // Resart the game after you died
+  setstartingvalue();
+  $('#gameover-div').css('visibility', 'hidden');
+  $('#game-div').css('visibility', 'visible');
+};
 
 var runMap = function() {
+  // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
   scroller.addObject(4,1,'&#x1f347;');
   scroller.addObject(6,2,'&#x1f347;');
   scroller.run();
-}
+};
 
 var setEventHandlers = function() {
-	$('#gameover-div').css('visibility', 'hidden');
+  // This tells the program which functions to call when
+  $('#gameover-div').css('visibility', 'hidden');
   setInterval(changetimeofdayCounter, 1000);
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
@@ -239,15 +259,20 @@ var setEventHandlers = function() {
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
- $('#sell-berries-button').click(Sellberriesbutton);
+  $('#sell-berries-button').click(Sellberriesbutton);
   $('#restart-button').click(restartgame);
-   $('#game-over').hide();
+  $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
   setInterval(berryAvailableCounter,1000);
+  $('#Health').click(healthButtonClick);
+
+  // Turn on spolight/firelight
   setSpotlightTracking();
-    $('#Health').click(healthButtonClick);
+
+  // Start out driving
   runMap();
 };
+
 $( document ).ready(function() {
   setEventHandlers();
 });
