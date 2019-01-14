@@ -6,89 +6,124 @@ Todos:
 	Add berries ready to be picked
 */
 var PickUpWoodButtonClick = function() {
+  // If wood fallen count less then 10 alert and quit function
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
     alert("no wood found in forest");
     return;
   }
 
+  // Increase Wood Collected
   var current_value = Number.parseInt($('#wood-collected-count').text());
   $('#wood-collected-count').text(current_value + 10);
+
+  // If more then 10 mark inventory full
   if(current_value >10){
     $('#wood-collected-count').text(current_value);	
     $('#wood-collected-count').addClass('inventory-full');
   }
+
+  // Decrease Wood Fallen
   current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value - 10);
 };
+
 var setstartingvalue = function(){
-		 $('#Health-count-').text(10);
-}
+  // This can be used to reset values
+  $('#Health-count-').text(10);
+};
+
 var onesecondtimer = function() {
+  // Increase second timer by 1
   var current_value = Number.parseInt($('#second-timer-count').text());
   $('#second-timer-count').text(current_value + 1);
 };
+
 var fallenwoodCounter = function() {
+  // Increase Fallen wood count by 1
   var current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value + 1);
 };
+
 var berryAvailableCounter = function() {
+  // Increase berries avaliable by 1
   var current_value = Number.parseInt($('#berries-available-count').text());
   $('#berries-available-count').text(current_value + 1);
 };
+
 var carAvailableCounter = function() {
+  // Increase cars avaliable by 1
   var current_value = Number.parseInt($('#cars-collected-count').text());
   $('#cars-collected-count').text(current_value + 1);
 };
 
-
-var collectberriesButtonClick = function() { 
-	 if(Number.parseInt($('#berries-available-count').text()) <10){
+var collectberriesButtonClick = function() {
+  // If verries avaliable less then 10 alert and quit function
+  if(Number.parseInt($('#berries-available-count').text()) <10){
     alert("not enough berries available in forest");
     return;
   }
+  
+  // Get car count
   var car_value = Number.parseInt($('#cars-collected-count').text());
   
+  // Increase berries collected by 10 and by car count
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value + 10 + car_value);
   
-   current_value = Number.parseInt($('#berries-available-count').text());
+  // Decrease berries collected by 10
+  current_value = Number.parseInt($('#berries-available-count').text());
   $('#berries-available-count').text(current_value - 10);
-	
- $('#emoji-div').append('&#x1f347;');
+
+  // Add berries icon
+  $('#emoji-div').append('&#x1f347;');
 } ;
 
-var changetimeofdayCounter= function() { 
-	var current_value = Number.parseInt($('#Health-count-').text()); 
- if (current_value >= 67){
-   $('body').css('background-color','green');
- } else if (current_value < 67 && current_value >= 34){
- 	 $('body').css('background-color','yellow');
- }else {
+var changetimeofdayCounter= function() {
+  // Get health count
+  var current_value = Number.parseInt($('#Health-count-').text());
+
+  // If health count is large set background to green
+  if (current_value >= 67){
+    $('body').css('background-color','green');
+  // If health count is medium set background to yellow
+  } else if (current_value < 67 && current_value >= 34){
+    $('body').css('background-color','yellow');
+  // If health count is low set background to red
+  }else {
  	$('body').css('background-color','red');
- }
+  }
+
+  // decrease fitre 
   fireDieDown();
 };
 
 var fireDieDown = function() {
+  // Darken suroundings
   var originalOpacity = $('#mouse-div').css("opacity");
   $('#mouse-div').css("opacity", originalOpacity /.99); 
 }
 
 var buildfire= function() {
+  // If wood collected count is less then 10 alert and quit function
   if(Number.parseInt($('#wood-collected-count').text()) <10){
     alert("no wood collected left");
     return;
   }
 
+  // Decrease wood by 5
   current_value = Number.parseInt($('#wood-collected-count').text());
   $('#wood-collected-count').text(current_value - 5);
 
-  $('#emoji-div').append('&#x1f525;'); 
+  // Lighten suroundings
   var originalOpacity = $('#mouse-div').css("opacity");
   $('#mouse-div').css("opacity", originalOpacity * .9);
+
+  // Add wood icon
+  $('#emoji-div').append('&#x1f525;'); 
 };
 
 var setSpotlightTracking = function() {
+  // Setup dark overlay for fire spotlight
   $('#mouse-div').css("top", 0-5040);
   $('#mouse-div').css("left", 0-5040)
   $(document).mousemove(function (e) {
@@ -98,32 +133,38 @@ var setSpotlightTracking = function() {
 };
 
 var GetMoney = function() {
-		var current_value = Number.parseInt($('#Money-count').text());
+  // Increase money by 10
+  var current_value = Number.parseInt($('#Money-count').text());
   $('#Money-count').text(current_value + 10);
-
- 
 };
+
 var sellwood=function() {
-  if(	DecreasewoodCount(9)){
-		var current_value = Number.parseInt($('#Money-count').text());
+  // Decrease wood by 9 and if successful increase money by 10
+  if (DecreasewoodCount(9)) {
+    var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
 };
-var Sellberriesbutton = function() {
- if(	DecreaseBerryCount()){
-		var current_value = Number.parseInt($('#Money-count').text());
-  $('#Money-count').text(current_value + 10);}
 
- 
+var Sellberriesbutton = function() {
+  // Decrease Berries and if successful increase money by 10
+  if (DecreaseBerryCount()) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 10);
+  }
 };
+
 var healthButtonClick = function() {
-  if	(DecreaseBerryCount()){
+  // Decrease Berries and if successful increase health count
+  if (DecreaseBerryCount()) {
+  	// If health is less the 99 then increase health by 2
     var current_value = Number.parseInt($('#Health-count-').text()); 
     if (current_value<99){
       $('#Health-count-').text(current_value + 2);
     }
   }
-}
+};
+
 var DecreaseBerryCount=function( ) {
  if(Number.parseInt($('#berries-collected-count').text()) <1){
     alert("no berries found in forest ");
