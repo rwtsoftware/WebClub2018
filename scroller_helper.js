@@ -1,5 +1,5 @@
 
-var myMap = undefined;
+var myMap;
 
 
 var draw = function(myMap) {
