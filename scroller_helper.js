@@ -78,21 +78,22 @@ var scroller = {
 	    .html('')
 	    .focus();
 	$(window)
-	    .keypress(function( event ) {
-	      if (event.key === 'w') {
-	        myMap.player.y--;
+	  .off("keypress")
+	  .keypress(function( event ) {
+	    if (event.key === 'w') {
+	      myMap.player.y--;
+	    }
+	    if (event.key === 's') {
+	      myMap.player.y++;
+	    }
+	    if (event.key === 'a') {
+	      myMap.player.x--;
 	      }
-	       if (event.key === 's') {
-	        myMap.player.y++;
-	      }
-	      if (event.key === 'a') {
-	        myMap.player.x--;
-	      }
-	      if (event.key === 'd') {
-	        myMap.player.x++;
-	      }
-	      drawPlayer(myMap);
-	    })
+	    if (event.key === 'd') {
+	      myMap.player.x++;
+	    }
+	    drawPlayer(myMap);
+	  });
     $(myMap.window).append('<div class="player">'+myMap.player.html+'</div>');
     $(myMap.window).children('.player').css({
       	width: myMap.picture_size + 'px',
