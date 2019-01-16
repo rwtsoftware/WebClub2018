@@ -265,7 +265,7 @@ var setEventHandlers = function() {
   setInterval(fallenwoodCounter,1000);
   setInterval(berryAvailableCounter,1000);
   $('#Health').click(healthButtonClick);
-
+ $('#start-up-car-button').click(startCarUp);
   // Turn on spolight/firelight
   setSpotlightTracking();
 
