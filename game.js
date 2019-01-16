@@ -153,7 +153,7 @@ var Sellberriesbutton = function() {
     $('#Money-count').text(current_value + 10);
   }
 };
-
+var startCarUp = function() {
 var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
   if (DecreaseBerryCount()) {
