@@ -181,7 +181,7 @@ var DecreaseBerryCount=function( ) {
 var DecreasewoodCount=function(count) {
   // If wood collected count  is less the parameter then alert and return failure
   if(Number.parseInt($('#wood-collected-count').text()) <count){
-    alert("you are missing wood broke boy");
+    alert("get some wood with skins #fortnite");
     return false ;
   }
 
