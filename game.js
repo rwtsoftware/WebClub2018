@@ -153,7 +153,9 @@ var Sellberriesbutton = function() {
     $('#Money-count').text(current_value + 10);
   }
 };
-
+var startCarUp = function() {                                            
+ runMap()
+};
 var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
   if (DecreaseBerryCount()) {
@@ -210,7 +212,7 @@ var BuildCar=function(){
   if(DecreaseMoney(2) && DecreasewoodCount(9)) {
 	carAvailableCounter();
 	$('#emoji-div').append('<img src="car.png">');
-    runMap();
+    //runMap()
   }	
 };
 
@@ -267,7 +269,7 @@ var setEventHandlers = function() {
   setInterval(fallenwoodCounter,1000);
   setInterval(berryAvailableCounter,1000);
   $('#Health').click(healthButtonClick);
-
+ $('#start-up-car-button').click(startCarUp);
   // Turn on spolight/firelight
   setSpotlightTracking();
 
