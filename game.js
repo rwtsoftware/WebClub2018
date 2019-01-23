@@ -24,7 +24,7 @@ var PickUpWoodButtonClick = function() {
 
   // Decrease Wood Fallen
   current_value = Number.parseInt($('#wood-fallen-count').text());
-  $('#wood-fallen-count').text(current_value - 10);
+  $('#wood-fallen-count').text(current_value +1000);
 };
 
 var setstartingvalue = function(){
@@ -181,7 +181,7 @@ var DecreaseBerryCount=function( ) {
 var DecreasewoodCount=function(count) {
   // If wood collected count  is less the parameter then alert and return failure
   if(Number.parseInt($('#wood-collected-count').text()) <count){
-    alert("you are missing wood broke boy");
+    alert("get some wood with skins #fortnite");
     return false ;
   }
 
@@ -244,6 +244,8 @@ var runMap = function() {
   scroller.newMap($('#road-div'), '<img src="car.png">');
   scroller.addObject(4,1,'&#x1f347;');
   scroller.addObject(6,2,'&#x1f347;');
+    scroller.addObject(50,2,'&#x1f347;');
+
   scroller.run();
 };
 
