@@ -244,10 +244,10 @@ var restartgame=function( ) {
 var runMap = function() {
   // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
-  scroller.addObject(4,1,'&#x1f347;');
-  scroller.addObject(6,2,'&#x1f347;');
-   scroller.addObject(5,1,'&#x1f347;');
-    scroller.addObject(50,2,'&#x1f347;');
+ var BERRY='&#x1f347;';
+ scroller.addObject(4,1,BERRY);
+  scroller.addObject(6,2,BERRY);
+    scroller.addObject(50,2,BERRY);
      
 
   scroller.run();
