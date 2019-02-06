@@ -249,7 +249,7 @@ var runMap = function() {
     scroller.addObject(50,2,BERRY);
     scroller.addObject(6,2,BERRY);
     scroller.addObject(10,3,BERRY);
-    scroller.addObject(7,1,BERRY);\
+    scroller.addObject(7,1,BERRY);
     scroller.addObject(5,2,BERRY);
     scroller.addObject(6,3,BERRY);
      
