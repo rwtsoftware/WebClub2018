@@ -197,7 +197,7 @@ var DecreasewoodCount=function(count) {
 var DecreaseMoney=function(count) {
   // If money count is less then parameter then alert and reutn failure
   if(Number.parseInt($('#Money-count').text()) <count){
-    alert("you are missing big bucks");
+    alert("you are missing dietz nutz");
     return false ;
   }
 
@@ -247,6 +247,7 @@ var runMap = function() {
   scroller.addObject(4,1,'&#x1f347;');
   scroller.addObject(6,2,'&#x1f347;');
     scroller.addObject(50,2,'&#x1f347;');
+     scroller.addObject(5,3,'&#x1f332;');
 
   scroller.run();
 };
