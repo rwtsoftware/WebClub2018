@@ -248,10 +248,10 @@ var runMap = function() {
   scroller.addObject(6,2,'&#x1f347;');
     scroller.addObject(50,2,'&#x1f347;');
      scroller.addObject(5,3,'&#x1f332;');
-
-  scroller.run();
-};
-
+ scroller.addObject(5,3,'&#x1f332;');
+   scroller.addObject(5,3,'&#x1f332;');
+};   scroller.addObject(5,3,'&#x1f332;');
+   scroller.addObject(5,3,'&#x1f332;');
 var setEventHandlers = function() {
   // This tells the program which functions to call when
   $('#gameover-div').css('visibility', 'hidden');
