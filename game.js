@@ -250,6 +250,7 @@ var runMap = function() {
      scroller.addObject(5,3,'&#x1f332;');
  scroller.addObject(5,3,'&#x1f332;');
   scroller.addObject(18,4,'&#x1f332;');
+    scroller.run();
 };
 
 var setEventHandlers = function() {
