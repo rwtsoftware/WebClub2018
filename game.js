@@ -246,8 +246,12 @@ var runMap = function() {
   scroller.newMap($('#road-div'), '<img src="car.png">');
  var BERRY='&#x1f347;';
  scroller.addObject(4,1,BERRY);
-  scroller.addObject(6,2,BERRY);
     scroller.addObject(50,2,BERRY);
+    scroller.addObject(6,2,BERRY);
+    scroller.addObject(10,3,BERRY);
+    scroller.addObject(7,1,BERRY);\
+    scroller.addObject(5,2,BERRY);
+    scroller.addObject(6,3,BERRY);
      
 
   scroller.run();
