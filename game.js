@@ -11,8 +11,19 @@ var PickUpWoodButtonClick = function() {
     alert("no wood found in forest");
     return;
   }
+increaseWoodCount();
+   // Decrease Wood Fallen
+  current_value = Number.parseInt($('#wood-fallen-count').text());
+  $('#wood-fallen-count').text(current_value +1000);
+};
 
-  // Increase Wood Collected
+
+
+
+
+
+var increaseWoodCount= function(){
+	 // Increase Wood Collected
   var current_value = Number.parseInt($('#wood-collected-count').text());
   $('#wood-collected-count').text(current_value + 10);
 
@@ -22,11 +33,8 @@ var PickUpWoodButtonClick = function() {
     $('#wood-collected-count').addClass('inventory-full');
   }
 
-  // Decrease Wood Fallen
-  current_value = Number.parseInt($('#wood-fallen-count').text());
-  $('#wood-fallen-count').text(current_value +1000);
-};
 
+};
 var setstartingvalue = function(){
   // This can be used to reset values
   $('#Health-count-').text(10);
