@@ -242,7 +242,7 @@ var restartgame=function( ) {
 };
 var RunOverMap = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value + 10 + car_value);
+  $('#berries-collected-count').text(current_value + 10 );
   
 };	
 var runMap = function() {
