@@ -240,8 +240,13 @@ var restartgame=function( ) {
   $('#gameover-div').css('visibility', 'hidden');
   $('#game-div').css('visibility', 'visible');
 };
-
+var RunOverMap = function() {
+	var current_value = Number.parseInt($('#berries-collected-count').text());
+  $('#berries-collected-count').text(current_value + 10 + car_value);
+  
+};	
 var runMap = function() {
+
   // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
 
@@ -254,13 +259,13 @@ var runMap = function() {
 	
 
  var BERRY='&#x1f347;';
- scroller.addObject(4,1,BERRY);
-    scroller.addObject(50,2,BERRY);
-    scroller.addObject(6,2,BERRY);
-    scroller.addObject(10,3,BERRY);
-    scroller.addObject(7,1,BERRY);
-    scroller.addObject(5,2,BERRY);
-    scroller.addObject(6,3,BERRY);
+ scroller.addObject(4,1,BERRY,RunOverMap);
+    scroller.addObject(50,2,BERRY,RunOverMap);
+    scroller.addObject(6,2,BERRY,RunOverMap);
+    scroller.addObject(10,3,BERRY,RunOverMap);
+    scroller.addObject(7,1,BERRY,RunOverMap);
+    scroller.addObject(5,2,BERRY,RunOverMap);
+    scroller.addObject(6,3,BERRY,RunOverMap);
      
 
   scroller.run();
