@@ -266,6 +266,10 @@ var runMap = function() {
     scroller.addObject(7,1,BERRY,RunOverMap);
     scroller.addObject(5,2,BERRY,RunOverMap);
     scroller.addObject(6,3,BERRY,RunOverMap);
+    
+    
+    var BALENONTHETRACK='&#x1f573;';
+    scroller.addObject(18,3,BALENONTHETRACK,RunOverMap);
      
 
   scroller.run();
