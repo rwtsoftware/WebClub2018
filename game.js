@@ -197,7 +197,7 @@ var DecreasewoodCount=function(count) {
 var DecreaseMoney=function(count) {
   // If money count is less then parameter then alert and reutn failure
   if(Number.parseInt($('#Money-count').text()) <count){
-    alert("you are missing big bucks");
+    alert("you are missing money");
     return false ;
   }
 
@@ -244,6 +244,15 @@ var restartgame=function( ) {
 var runMap = function() {
   // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
+
+
+     scroller.addObject(5,3,'&#x1f332;');
+ scroller.addObject(5,3,'&#x1f332;');
+  scroller.addObject(18,4,'&#x1f332;');
+   scroller.addObject(36,3,'&#x1f332;');
+    scroller.run();
+	
+
  var BERRY='&#x1f347;';
  scroller.addObject(4,1,BERRY);
     scroller.addObject(50,2,BERRY);
@@ -255,7 +264,9 @@ var runMap = function() {
      
 
   scroller.run();
+
 };
+     
 
 var setEventHandlers = function() {
   // This tells the program which functions to call when
