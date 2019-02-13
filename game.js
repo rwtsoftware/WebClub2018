@@ -62,7 +62,7 @@ var collectberriesButtonClick = function() {
     alert("not enough berries available in forest");
     return;
   }
-  
+  //If you run over wood your wood count goes up
   // Get car count
   var car_value = Number.parseInt($('#cars-collected-count').text());
   
@@ -245,11 +245,11 @@ var runMap = function() {
   // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
 
-
-     scroller.addObject(5,3,'&#x1f332;');
- scroller.addObject(5,3,'&#x1f332;');
-  scroller.addObject(18,4,'&#x1f332;');
-   scroller.addObject(36,3,'&#x1f332;');
+var WOOD ='&#x1f332;';
+     scroller.addObject(5,3,WOOD);
+ scroller.addObject(5,3,WOOD);
+  scroller.addObject(18,4,WOOD);
+   scroller.addObject(36,3,WOOD);
     scroller.run();
 	
 
