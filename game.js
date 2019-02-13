@@ -197,7 +197,7 @@ var DecreasewoodCount=function(count) {
 var DecreaseMoney=function(count) {
   // If money count is less then parameter then alert and reutn failure
   if(Number.parseInt($('#Money-count').text()) <count){
-    alert("you are missing dietz nutz");
+    alert("you are missing money");
     return false ;
   }
 
@@ -244,15 +244,27 @@ var restartgame=function( ) {
 var runMap = function() {
   // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
-  scroller.addObject(4,1,'&#x1f347;');
-  scroller.addObject(6,2,'&#x1f347;');
-    scroller.addObject(50,2,'&#x1f347;');
+
+
      scroller.addObject(5,3,'&#x1f332;');
  scroller.addObject(5,3,'&#x1f332;');
   scroller.addObject(18,4,'&#x1f332;');
    scroller.addObject(36,3,'&#x1f332;');
     scroller.run();
 	
+
+ var BERRY='&#x1f347;';
+ scroller.addObject(4,1,BERRY);
+    scroller.addObject(50,2,BERRY);
+    scroller.addObject(6,2,BERRY);
+    scroller.addObject(10,3,BERRY);
+    scroller.addObject(7,1,BERRY);
+    scroller.addObject(5,2,BERRY);
+    scroller.addObject(6,3,BERRY);
+     
+
+  scroller.run();
+
 };
      
 
