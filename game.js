@@ -255,9 +255,9 @@ var runMap = function() {
 
 var WOOD ='&#x1f332;';
      scroller.addObject(5,3,WOOD,increaseWoodCount);
- scroller.addObject(5,3,WOOD);
-  scroller.addObject(18,4,WOOD);
-   scroller.addObject(36,3,WOOD);
+ scroller.addObject(5,3,WOOD,increaseWoodCount);
+  scroller.addObject(18,4,WOOD,increaseWoodCount);
+   scroller.addObject(36,3,WOOD,increaseWoodCount);
     scroller.run();
 	
 
