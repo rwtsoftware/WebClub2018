@@ -254,7 +254,7 @@ var runMap = function() {
   scroller.newMap($('#road-div'), '<img src="car.png">');
 
 var WOOD ='&#x1f332;';
-     scroller.addObject(5,3,WOOD);
+     scroller.addObject(5,3,WOOD,increaseWoodCount);
  scroller.addObject(5,3,WOOD);
   scroller.addObject(18,4,WOOD);
    scroller.addObject(36,3,WOOD);
