@@ -25,6 +25,7 @@ var collisionDetect = function(myMap) {
   for (let k in myMap.objects) {
     let o = myMap.objects[k];
     if (myMap.player.x === o.x && myMap.player.y === o.y) {
+    	console.log(o);
     	o.callback();
     }
   }
