@@ -28,10 +28,10 @@ var increaseWoodCount= function(){
   $('#wood-collected-count').text(current_value + 10);
 
   // If more then 10 mark inventory full
-  if(current_value >10){
-    $('#wood-collected-count').text(current_value);	
-    $('#wood-collected-count').addClass('inventory-full');
-  }
+//  if(current_value >10){
+   // $('#wood-collected-count').text(current_value);	
+//    $('#wood-collected-count').addClass('inventory-full');
+// }
 
 
 };
