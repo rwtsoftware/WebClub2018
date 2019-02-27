@@ -11,22 +11,30 @@ var PickUpWoodButtonClick = function() {
     alert("no wood found in forest");
     return;
   }
-
-  // Increase Wood Collected
-  var current_value = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value + 10);
-
-  // If more then 10 mark inventory full
-  if(current_value >10){
-    $('#wood-collected-count').text(current_value);	
-    $('#wood-collected-count').addClass('inventory-full');
-  }
-
-  // Decrease Wood Fallen
+increaseWoodCount();
+   // Decrease Wood Fallen
   current_value = Number.parseInt($('#wood-fallen-count').text());
   $('#wood-fallen-count').text(current_value +1000);
 };
 
+
+
+
+
+
+var increaseWoodCount= function(){
+	 // Increase Wood Collected
+  var current_value = Number.parseInt($('#wood-collected-count').text());
+  $('#wood-collected-count').text(current_value + 10);
+
+  // If more then 10 mark inventory full
+//  if(current_value >10){
+   // $('#wood-collected-count').text(current_value);	
+//    $('#wood-collected-count').addClass('inventory-full');
+// }
+
+
+};
 var setstartingvalue = function(){
   // This can be used to reset values
   $('#Health-count-').text(10);
@@ -62,7 +70,7 @@ var collectberriesButtonClick = function() {
     alert("not enough berries available in forest");
     return;
   }
-  
+  //If you run over wood your wood count goes up
   // Get car count
   var car_value = Number.parseInt($('#cars-collected-count').text());
   
@@ -250,11 +258,11 @@ var runMap = function() {
   // Setup map and start driving
   scroller.newMap($('#road-div'), '<img src="car.png">');
 
-
-     scroller.addObject(5,3,'&#x1f332;');
- scroller.addObject(5,3,'&#x1f332;');
-  scroller.addObject(18,4,'&#x1f332;');
-   scroller.addObject(36,3,'&#x1f332;');
+var WOOD ='&#x1f332;';
+     scroller.addObject(5,3,WOOD,increaseWoodCount);
+ scroller.addObject(5,3,WOOD,increaseWoodCount);
+  scroller.addObject(18,4,WOOD,increaseWoodCount);
+   scroller.addObject(36,3,WOOD,increaseWoodCount);
     scroller.run();
 	
 
