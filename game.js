@@ -14,7 +14,7 @@ var PickUpWoodButtonClick = function() {
 increaseWoodCount();
    // Decrease Wood Fallen
   current_value = Number.parseInt($('#wood-fallen-count').text());
-  $('#wood-fallen-count').text(current_value +1000);
+  $('#wood-fallen-count').text(current_value -10);
 };
 
 
