@@ -250,7 +250,7 @@ var restartgame=function( ) {
 };
 var RunOverMap = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value + 10 );
+  $('#berries-collected-count').text(current_value - 10 );
   
 };	
 var runMap = function() {
@@ -278,7 +278,7 @@ var WOOD ='&#x1f332;';
     
     var BALENONTHETRACK='&#x1f573;';
     scroller.addObject(18,3,BALENONTHETRACK,RunOverMap);
-     
+     scroller.addObject(18,8,BALENONTHETRACK,RunOverMap);
 
   scroller.run();
 
