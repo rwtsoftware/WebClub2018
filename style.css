@@ -6,6 +6,8 @@
 	width:50%;
 	float:left;
 	overflow:hidden;
+
+
 }
 
 .inventory-label{
@@ -15,6 +17,8 @@ body{
 	background-color:green;
 }
 button{
+    background-color:#000000;
+    color:#ffffff;
 	border:dark green;
 	border-style:solid;
 	height:40px;
