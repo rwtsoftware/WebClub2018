@@ -146,6 +146,14 @@ var GetMoney = function() {
   $('#Money-count').text(current_value + 10);
 };
 
+var sellwood=function() {
+  // Decrease wood by 9 and if successful increase money by 10
+  if (DecreasewoodCount(9)) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 10);
+  }	
+};
+
 var Sellberriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
   if (DecreaseBerryCount()) {
