@@ -152,13 +152,27 @@ var sellwood=function() {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
+};var sellcar=function() {
+  // Decrease wood by 1 and if successful increase money by 100
+  if (DecreasecarCount(1)) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 100);
+  }	
 };
+
 
 var Sellberriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
   if (DecreaseBerryCount()) {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
+  }
+};
+var Sellcarbutton = function() {
+  // Decrease car and if successful increase money by 100
+  if (DecreasecarCount()) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 100);
   }
 };
 var startCarUp = function() {                                            
