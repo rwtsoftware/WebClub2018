@@ -248,7 +248,12 @@ var restartgame=function( ) {
   $('#gameover-div').css('visibility', 'hidden');
   $('#game-div').css('visibility', 'visible');
 };
-var RunOverMap = function() {
+var RunOverBerries = function() {
+	var current_value = Number.parseInt($('#berries-collected-count').text());
+  $('#berries-collected-count').text(current_value + 10 );
+  
+};
+var RunOverHole = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value - 10 );
   
@@ -267,18 +272,18 @@ var WOOD ='&#x1f332;';
 	
 
  var BERRY='&#x1f347;';
- scroller.addObject(4,1,BERRY,RunOverMap);
-    scroller.addObject(50,2,BERRY,RunOverMap);
-    scroller.addObject(6,2,BERRY,RunOverMap);
-    scroller.addObject(10,3,BERRY,RunOverMap);
-    scroller.addObject(7,1,BERRY,RunOverMap);
-    scroller.addObject(5,2,BERRY,RunOverMap);
-    scroller.addObject(6,3,BERRY,RunOverMap);
+ scroller.addObject(4,1,BERRY,RunOverBerries);
+    scroller.addObject(50,2,BERRY,RunOverBerries);
+    scroller.addObject(6,2,BERRY,RunOverBerries);
+    scroller.addObject(10,3,BERRY,RunOverBerries);
+    scroller.addObject(7,1,BERRY,RunOverBerries);
+    scroller.addObject(5,2,BERRY,RunOverBerries);
+    scroller.addObject(6,3,BERRY,RunOverBerries);
     
     
     var BALENONTHETRACK='&#x1f573;';
-    scroller.addObject(18,3,BALENONTHETRACK,RunOverMap);
-     scroller.addObject(18,8,BALENONTHETRACK,RunOverMap);
+    scroller.addObject(18,3,BALENONTHETRACK,RunOverHole);
+     scroller.addObject(18,8,BALENONTHETRACK,RunOverHole);
 
   scroller.run();
 
