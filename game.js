@@ -216,7 +216,7 @@ var DecreasewoodCount=function(count) {
 };
 var DecreasecarCount=function(count) {
   // If car collected count  is less the parameter then alert and return failure
-  if(Number.parseInt($('#car-collected-count').text()) <count){
+  if(Number.parseInt($('#car-collected-count').text()) <1){
     alert("get some v bucks for skins #fortnite");
     return false ;
   }
