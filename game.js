@@ -216,18 +216,18 @@ alert('decrease carcount '+count);
 
 
   // If car collected count  is less the parameter then alert and return failure
-  if(Number.parseInt($('#car-collected-count').text()) <1){
+  if(Number.parseInt($('#cars-collected-count').text()) <1){
     alert("get some v bucks for skins #fortnite");
     return false ;
   }
 
   // Decrease car collected count by parameter and return success
-  var current_value2 = Number.parseInt($('#car-collected-count').text());
+  var current_value2 = Number.parseInt($('#cars-collected-count').text());
 
-alert('currentvaluetwo'+$('#car-collected-count').text());
+alert('currentvaluetwo'+$('#cars-collected-count').text());
 
 
-  $('#car-collected-count').text(current_value2 - count);
+  $('#cars-collected-count').text(current_value2 - count);
   return true;  
 };
 
