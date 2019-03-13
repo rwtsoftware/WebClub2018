@@ -169,13 +169,7 @@ var Sellberriesbutton = function() {
     $('#Money-count').text(current_value + 10);
   }
 };
-var Sellcarbutton = function() {
-  // Decrease car and if successful increase money by 100
-  if (DecreasecarCount()) {
-    var current_value = Number.parseInt($('#Money-count').text());
-    $('#Money-count').text(current_value + 100);
-  }
-};
+
 var startCarUp = function() {                                            
  runMap()
 };
