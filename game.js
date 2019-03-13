@@ -175,8 +175,11 @@ var Sellcarbutton = function() {
     $('#Money-count').text(current_value + 100);
   }
 };
-var startCarUp = function() {                                            
- runMap()
+var startCarUp = function() {
+  var current_value = Number.parseInt($('#cars-collected-count').text());
+  if (current_value>0){
+    runMap();
+  }
 };
 var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
