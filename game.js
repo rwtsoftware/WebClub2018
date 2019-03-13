@@ -224,7 +224,7 @@ alert('decrease carcount '+count);
   // Decrease car collected count by parameter and return success
   var current_value2 = Number.parseInt($('#car-collected-count').text());
 
-alert('currentvaluetwo'+current_value2);
+alert('currentvaluetwo'+$('#car-collected-count').text());
 
 
   $('#car-collected-count').text(current_value2 - count);
