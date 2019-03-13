@@ -14,7 +14,7 @@ var PickUpWoodButtonClick = function() {
 increaseWoodCount();
    // Decrease Wood Fallen
   current_value = Number.parseInt($('#wood-fallen-count').text());
-  $('#wood-fallen-count').text(current_value +1000);
+  $('#wood-fallen-count').text(current_value -10);
 };
 
 
@@ -152,13 +152,27 @@ var sellwood=function() {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
+};var sellcar=function() {
+  // Decrease wood by 1 and if successful increase money by 100
+  if (DecreasecarCount(1)) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 100);
+  }	
 };
+
 
 var Sellberriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
   if (DecreaseBerryCount()) {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
+  }
+};
+var Sellcarbutton = function() {
+  // Decrease car and if successful increase money by 100
+  if (DecreasecarCount()) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 100);
   }
 };
 var startCarUp = function() {                                            
@@ -297,6 +311,7 @@ var setEventHandlers = function() {
   $('#pick-up-wood-button').click(PickUpWoodButtonClick);
   $('#build-fire-button').click(buildfire);
   $('#sell-wood').click(sellwood);
+  $('#sell-car').click(Sellcarbutton);
   $('#build-a-car-button').click(BuildCar);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer,1000);
