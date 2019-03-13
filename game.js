@@ -209,6 +209,11 @@ var DecreasewoodCount=function(count) {
     alert("get some wood with skins #fortnite");
     return false ;
   }
+   // Decrease wood collected count by parameter and return success
+  var current_value2 = Number.parseInt($('#wood-collected-count').text());
+  $('#wood-collected-count').text(current_value2 - count);
+  return true;  
+};
 var DecreasecarCount=function(count) {
   // If car collected count  is less the parameter then alert and return failure
   if(Number.parseInt($('#car-collected-count').text()) <count){
@@ -216,9 +221,9 @@ var DecreasecarCount=function(count) {
     return false ;
   }
 
-  // Decrease wood collected count by parameter and return success
-  var current_value2 = Number.parseInt($('#wood-collected-count').text());
-  $('#wood-collected-count').text(current_value2 - count);
+  // Decrease car collected count by parameter and return success
+  var current_value2 = Number.parseInt($('#car-collected-count').text());
+  $('#car-collected-count').text(current_value2 - count);
   return true;  
 };
 
