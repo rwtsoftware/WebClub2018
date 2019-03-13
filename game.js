@@ -271,7 +271,7 @@ var RunOverHole = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value - 10 );
   	var current_value = Number.parseInt($('#cars-collected-count').text());
-  $('#cars-collected-count').text(current_value - 10 );
+  $('#cars-collected-count').text(current_value - 1 );
   
 };	
 var runMap = function() {
