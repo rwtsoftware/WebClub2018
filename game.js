@@ -330,7 +330,7 @@ var setEventHandlers = function() {
   setSpotlightTracking();
 
   // Start out driving
-  runMap();
+  //runMap();
 };
 
 $( document ).ready(function() {
