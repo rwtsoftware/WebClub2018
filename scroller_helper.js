@@ -55,6 +55,14 @@ var scroller = {
   	}
   },
   
+   killcar: function(x, y, html, callback) {
+  clearInterval(myMap.interval);
+       if (myMap.failureCallback) {
+          myMap.failureCallback();
+      	}
+      	myMap = undefined;
+   },
+  
   addObject: function(x, y, html, callback) {
   	myMap.objects.push({x: x, y: y, html: html, callback: callback, id: myMap.objects.length});
   },
