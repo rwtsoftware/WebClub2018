@@ -252,6 +252,16 @@ var BuildCar=function(){
   }	
 };
 
+var buildHouse=function(){
+  // If decrease money and wood successful then add car and drive
+  if(DecreaseMoney(2) && DecreasewoodCount(9)) {
+	//carAvailableCounter();
+	//$('#emoji-div').append('<img src="car.png">');
+    //runMap()
+    alert('you built a house')
+  }	
+};
+
 var Decreasehealth=function( ) {
   // if no more health out end game and return failure
   if (Number.parseInt($('#Health-count-').text()) <1) {
@@ -340,6 +350,7 @@ var setEventHandlers = function() {
   setInterval(berryAvailableCounter,1000);
   $('#Health').click(healthButtonClick);
  $('#start-up-car-button').click(startCarUp);
+ $('#build-house-button').click(buildHouse);
   // Turn on spolight/firelight
   setSpotlightTracking();
 
