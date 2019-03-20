@@ -170,9 +170,21 @@ var Sellberriesbutton = function() {
   }
 };
 
-var startCarUp = function() {                                            
- runMap()
+var Sellcarbutton = function() {
+  // Decrease car and if successful increase money by 100
+  if (DecreasecarCount()) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 100);
+  }
 };
+
+var startCarUp = function() {
+  var current_value = Number.parseInt($('#cars-collected-count').text());
+  if (current_value>0){
+    runMap();
+  }
+};
+
 var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
   if (DecreaseBerryCount()) {
@@ -278,6 +290,8 @@ var RunOverBerries = function() {
 var RunOverHole = function() {
 	var current_value = Number.parseInt($('#berries-collected-count').text());
   $('#berries-collected-count').text(current_value - 10 );
+  	var current_value = Number.parseInt($('#cars-collected-count').text());
+  $('#cars-collected-count').text(current_value - 1 );
   
 };	
 var runMap = function() {
@@ -336,7 +350,7 @@ var setEventHandlers = function() {
   setSpotlightTracking();
 
   // Start out driving
-  runMap();
+  //runMap();
 };
 
 $( document ).ready(function() {
