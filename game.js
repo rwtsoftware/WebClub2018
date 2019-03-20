@@ -320,6 +320,7 @@ var WOOD ='&#x1f332;';
     var BALENONTHETRACK='&#x1f573;';
     scroller.addObject(18,3,BALENONTHETRACK,RunOverHole);
      scroller.addObject(18,8,BALENONTHETRACK,RunOverHole);
+ scroller.addObject(30,4,BALENONTHETRACK,RunOverHole);
 
   scroller.run();
 
