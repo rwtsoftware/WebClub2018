@@ -152,8 +152,9 @@ var sellwood=function() {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }	
-};var sellcar=function() {
-  // Decrease wood by 1 and if successful increase money by 100
+};
+var Sellcarbutton=function() {
+  // Decrease car by 1 and if successful increase money by 100
   if (DecreasecarCount(1)) {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 100);
@@ -168,6 +169,7 @@ var Sellberriesbutton = function() {
     $('#Money-count').text(current_value + 10);
   }
 };
+
 var Sellcarbutton = function() {
   // Decrease car and if successful increase money by 100
   if (DecreasecarCount()) {
@@ -175,12 +177,14 @@ var Sellcarbutton = function() {
     $('#Money-count').text(current_value + 100);
   }
 };
+
 var startCarUp = function() {
   var current_value = Number.parseInt($('#cars-collected-count').text());
   if (current_value>0){
     runMap();
   }
 };
+
 var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
   if (DecreaseBerryCount()) {
@@ -211,10 +215,23 @@ var DecreasewoodCount=function(count) {
     alert("get some wood with skins #fortnite");
     return false ;
   }
-
-  // Decrease wood collected count by parameter and return success
+   // Decrease wood collected count by parameter and return success
   var current_value2 = Number.parseInt($('#wood-collected-count').text());
   $('#wood-collected-count').text(current_value2 - count);
+  return true;  
+};
+var DecreasecarCount=function(count) {
+
+  // If car collected count  is less the parameter then alert and return failure
+  if(Number.parseInt($('#cars-collected-count').text()) <1){
+    alert("get some v bucks for skins #fortnite");
+    return false ;
+  }
+
+  // Decrease car collected count by parameter and return success
+  var current_value2 = Number.parseInt($('#cars-collected-count').text());
+
+  $('#cars-collected-count').text(current_value2 - count);
   return true;  
 };
 
