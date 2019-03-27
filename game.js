@@ -170,13 +170,7 @@ var Sellberriesbutton = function() {
   }
 };
 
-var Sellcarbutton = function() {
-  // Decrease car and if successful increase money by 100
-  if (DecreasecarCount()) {
-    var current_value = Number.parseInt($('#Money-count').text());
-    $('#Money-count').text(current_value + 100);
-  }
-};
+
 
 var startCarUp = function() {
   var current_value = Number.parseInt($('#cars-collected-count').text());
@@ -255,6 +249,16 @@ var BuildCar=function(){
 	carAvailableCounter();
 	$('#emoji-div').append('<img src="car.png">');
     //runMap()
+  }	
+};
+
+var buildHouse=function(){
+  // If decrease money and wood successful then add car and drive
+  if(DecreaseMoney(2) && DecreasewoodCount(9)) {
+	//carAvailableCounter();
+	//$('#emoji-div').append('<img src="car.png">');
+    //runMap()
+    alert('you built a house')
   }	
 };
 
@@ -350,6 +354,7 @@ var setEventHandlers = function() {
   setInterval(berryAvailableCounter,1000);
   $('#Health').click(healthButtonClick);
  $('#start-up-car-button').click(startCarUp);
+ $('#build-house-button').click(buildHouse);
   // Turn on spolight/firelight
   setSpotlightTracking();
 
