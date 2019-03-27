@@ -287,13 +287,16 @@ var RunOverBerries = function() {
   $('#berries-collected-count').text(current_value + 10 );
   
 };
-var RunOverHole = function() {
+var RunOverHole = function(map) {
+  return function() {
+	map.killcar();
 	var current_value = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value - 10 );
+    $('#berries-collected-count').text(current_value - 10 );
   	var current_value = Number.parseInt($('#cars-collected-count').text());
-  $('#cars-collected-count').text(current_value - 1 );
-  
+    $('#cars-collected-count').text(current_value - 1 );
+  }
 };	
+
 var runMap = function() {
 
   // Setup map and start driving
@@ -318,8 +321,9 @@ var WOOD ='&#x1f332;';
     
     
     var BALENONTHETRACK='&#x1f573;';
-    scroller.addObject(18,3,BALENONTHETRACK,RunOverHole);
-     scroller.addObject(18,8,BALENONTHETRACK,RunOverHole);
+    scroller.addObject(18,3,BALENONTHETRACK,RunOverHole(scroller));
+     scroller.addObject(18,8,BALENONTHETRACK,RunOverHole(scroller));
+ scroller.addObject(30,4,BALENONTHETRACK,RunOverHole(scroller));
 
   scroller.run();
 
