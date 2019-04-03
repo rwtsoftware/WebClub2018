@@ -22,6 +22,7 @@ increaseWoodCount();
 
 
 
+
 var increaseWoodCount= function(){
 	 // Increase Wood Collected
   var current_value = Number.parseInt($('#wood-collected-count').text());
