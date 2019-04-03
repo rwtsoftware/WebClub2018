@@ -260,7 +260,7 @@ var BuildCar=function(){
 //};
 
 
-//var buildHouse=function(){
+var buildHouse=function(){
   // If decrease money and wood successful then add car and drive
   if(DecreaseMoney(2) && DecreasewoodCount(9)) {
 	//carAvailableCounter();
