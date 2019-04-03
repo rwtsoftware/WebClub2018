@@ -266,7 +266,7 @@ var BuildCar=function(){
 	//carAvailableCounter();
 	//$('#emoji-div').append('<img src="car.png">');
     //runMap()
-    alert('you built a house')
+    alert('you built a house');
   }	
 };
 
