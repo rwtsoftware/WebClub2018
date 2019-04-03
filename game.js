@@ -351,7 +351,7 @@ var setEventHandlers = function() {
   $('#sell-wood').click(sellwood);
   $('#sell-car').click(Sellcarbutton);
   $('#build-a-car-button').click(BuildCar);
-  $('#build-a-car-button').onmouseover(buildCar);
+  //$('#build-a-car-button').onmouseover(buildCar);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
