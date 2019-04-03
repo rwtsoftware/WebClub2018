@@ -254,13 +254,13 @@ var BuildCar=function(){
 };
 
 
-var buildCarHelp=function(){
+//var buildCarHelp=function(){
   // If decrease money and wood successful then add car and drive
- $('#build-a-car-button'}.title='todo'   	;
-};
+// $('#build-a-car-button'}.title='todo'   	
+//};
 
 
-var buildHouse=function(){
+//var buildHouse=function(){
   // If decrease money and wood successful then add car and drive
   if(DecreaseMoney(2) && DecreasewoodCount(9)) {
 	//carAvailableCounter();
