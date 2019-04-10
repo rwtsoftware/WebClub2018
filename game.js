@@ -246,7 +246,7 @@ var DecreaseMoney=function(count) {
 
 var BuildCar=function(){
   // If decrease money and wood successful then add car and drive
-  if(DecreaseMoney(2) && DecreasewoodCount(9)) {
+  if(DecreaseMoney(100) && DecreasewoodCount(24)) {
 	carAvailableCounter();
 	$('#emoji-div').append('<img src="car.png">');
     //runMap()
