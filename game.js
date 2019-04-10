@@ -171,6 +171,14 @@ var Sellberriesbutton = function() {
   }
 };
 
+var Eat5Berriesbutton = function() {
+  // Decrease Berries and if successful increase money by 10
+  if (DecreaseBerryCount()) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Money-count').text(current_value + 10);
+  }
+};
+
 
 
 var startCarUp = function() {
@@ -180,7 +188,8 @@ var startCarUp = function() {
   }
 };
 
-var healthButtonClick = function() {
+var 
+ButtonClick = function() {
   // Decrease Berries and if successful increase health count
   if (DecreaseBerryCount()) {
   	// If health is less the 99 then increase health by 2
@@ -356,8 +365,8 @@ var setEventHandlers = function() {
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
-  $('#sell-berries-button').click(Sellberriesbutton);
-  $('#x5-berries-button').click(Eat 5 Berriesbutton);
+ ('#sell-berries-button').click(Sellberriesbutton);
+  $('#x5-berries-button').click(Eat5Berriesbutton);
   $('#restart-button').click(restartgame);
   $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
