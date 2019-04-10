@@ -200,16 +200,16 @@ ButtonClick = function() {
   }
 };
 
-var DecreaseBerryCount=function( ) {
+var DecreaseBerryCount=function(count ) {
   // If berries collected count is less then 1 alert and return failure
-  if(Number.parseInt($('#berries-collected-count').text()) <1){
+  if(Number.parseInt($('#berries-collected-count').text()) <count){
     alert("no berries found in forest ");
     return false;
   }
 
   // Decrease berries by 1 and return success
   var current_value2 = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value2 - 1);
+  $('#berries-collected-count').text(current_value2 - count);
   return true;  
 };
 
