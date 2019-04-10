@@ -22,6 +22,7 @@ increaseWoodCount();
 
 
 
+
 var increaseWoodCount= function(){
 	 // Increase Wood Collected
   var current_value = Number.parseInt($('#wood-collected-count').text());
@@ -252,13 +253,20 @@ var BuildCar=function(){
   }	
 };
 
+
+//var buildCarHelp=function(){
+  // If decrease money and wood successful then add car and drive
+// $('#build-a-car-button'}.title='todo'   	
+//};
+
+
 var buildHouse=function(){
   // If decrease money and wood successful then add car and drive
   if(DecreaseMoney(2) && DecreasewoodCount(9)) {
 	//carAvailableCounter();
 	//$('#emoji-div').append('<img src="car.png">');
     //runMap()
-    alert('you built a house')
+    alert('you built a house');
   }	
 };
 
@@ -343,6 +351,7 @@ var setEventHandlers = function() {
   $('#sell-wood').click(sellwood);
   $('#sell-car').click(Sellcarbutton);
   $('#build-a-car-button').click(BuildCar);
+  //$('#build-a-car-button').onmouseover(buildCar);
   $('#get-money-button').keypress(GetMoney);
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
