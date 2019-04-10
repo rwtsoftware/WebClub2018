@@ -44,3 +44,9 @@ button{
 #gameover-div{
 	font-size:xx-large;
 }
+div {
+  width: 200px;
+  height: 50px;
+  background-color: #eee;
+  overflow:hidden ;
+}
