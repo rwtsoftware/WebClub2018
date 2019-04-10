@@ -165,15 +165,15 @@ var Sellcarbutton=function() {
 
 var Sellberriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
-  if (DecreaseBerryCount()) {
+  if (DecreaseBerryCount(1)) {
     var current_value = Number.parseInt($('#Money-count').text());
-    $('#Money-count').text(current_value + 10);
+    $('#Health-count-').text(current_value + 10 );
   }
 };
 
 var Eat5Berriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
-  if (DecreaseBerryCount()) {
+  if (DecreaseBerryCount(5)) {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }
