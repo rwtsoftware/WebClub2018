@@ -357,6 +357,7 @@ var setEventHandlers = function() {
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
   $('#sell-berries-button').click(Sellberriesbutton);
+  $('#x5-berries-button').click(Eat 5 Berriesbutton);
   $('#restart-button').click(restartgame);
   $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
