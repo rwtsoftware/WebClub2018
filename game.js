@@ -188,8 +188,7 @@ var startCarUp = function() {
   }
 };
 
-var 
-ButtonClick = function() {
+var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
   if (DecreaseBerryCount(1)) {
   	// If health is less the 99 then increase health by 2
