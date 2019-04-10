@@ -364,7 +364,7 @@ var setEventHandlers = function() {
   setInterval(onesecondtimer,1000);
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
- ('#sell-berries-button').click(Sellberriesbutton);
+  $('#sell-berries-button').click(Sellberriesbutton);
   $('#x5-berries-button').click(Eat5Berriesbutton);
   $('#restart-button').click(restartgame);
   $('#game-over').hide();
