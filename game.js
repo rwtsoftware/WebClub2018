@@ -191,7 +191,7 @@ var startCarUp = function() {
 var 
 ButtonClick = function() {
   // Decrease Berries and if successful increase health count
-  if (DecreaseBerryCount()) {
+  if (DecreaseBerryCount(1)) {
   	// If health is less the 99 then increase health by 2
     var current_value = Number.parseInt($('#Health-count-').text()); 
     if (current_value<99){
