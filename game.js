@@ -175,6 +175,7 @@ var Eat5Berriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
   if (DecreaseBerryCount(5)) {
     var current_value = Number.parseInt($('#Heath-count-').text());
+    console.log(current_value);
     $('#Heath-count-').text(current_value + 10);
   }
 };
