@@ -366,6 +366,7 @@ var setEventHandlers = function() {
   $('#x5-berries-button').click(Eat5Berriesbutton);
   $('#restart-button').click(restartgame);
   $('#game-over').hide();
+   $('#warning').hide();
   setInterval(fallenwoodCounter,1000);
   setInterval(berryAvailableCounter,1000);
   $('#Health').click(healthButtonClick);
