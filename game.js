@@ -18,8 +18,7 @@ increaseWoodCount();
 };
 
 
-	var displayalert= function(alerttext) 
-	 $('#gameover-div').css('visibility', 'visible');
+	var displayalert= function(alerttext) {
      $('#game-div').css('visibility', 'hidden');
      $('#warning').show();
      $('#inventory-div').hide();
