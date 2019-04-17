@@ -165,7 +165,15 @@ var Sellcarbutton=function() {
 
 var Sellberriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
-  if (DecreaseBerryCount()) {
+  if (DecreaseBerryCount(1)) {
+    var current_value = Number.parseInt($('#Money-count').text());
+    $('#Health-count-').text(current_value + 10 );
+  }
+};
+
+var Eat5Berriesbutton = function() {
+  // Decrease Berries and if successful increase money by 10
+  if (DecreaseBerryCount(5)) {
     var current_value = Number.parseInt($('#Money-count').text());
     $('#Money-count').text(current_value + 10);
   }
@@ -182,7 +190,7 @@ var startCarUp = function() {
 
 var healthButtonClick = function() {
   // Decrease Berries and if successful increase health count
-  if (DecreaseBerryCount()) {
+  if (DecreaseBerryCount(1)) {
   	// If health is less the 99 then increase health by 2
     var current_value = Number.parseInt($('#Health-count-').text()); 
     if (current_value<99){
@@ -191,16 +199,16 @@ var healthButtonClick = function() {
   }
 };
 
-var DecreaseBerryCount=function( ) {
+var DecreaseBerryCount=function(count ) {
   // If berries collected count is less then 1 alert and return failure
-  if(Number.parseInt($('#berries-collected-count').text()) <1){
+  if(Number.parseInt($('#berries-collected-count').text()) <count){
     alert("no berries found in forest ");
     return false;
   }
 
   // Decrease berries by 1 and return success
   var current_value2 = Number.parseInt($('#berries-collected-count').text());
-  $('#berries-collected-count').text(current_value2 - 1);
+  $('#berries-collected-count').text(current_value2 - count);
   return true;  
 };
 
@@ -357,6 +365,7 @@ var setEventHandlers = function() {
   setInterval(Decreasehealth,1000);
   $('#collect-berries-button').click(collectberriesButtonClick);
   $('#sell-berries-button').click(Sellberriesbutton);
+  $('#x5-berries-button').click(Eat5Berriesbutton);
   $('#restart-button').click(restartgame);
   $('#game-over').hide();
   setInterval(fallenwoodCounter,1000);
