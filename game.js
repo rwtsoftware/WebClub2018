@@ -8,7 +8,7 @@ Todos:
 var PickUpWoodButtonClick = function() {
   // If wood fallen count less then 10 alert and quit function
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
-    alert("no wood found in forest");
+   displayalert("no wood found in forest");
     return;
   }
 increaseWoodCount();
@@ -18,8 +18,14 @@ increaseWoodCount();
 };
 
 
-
-
+	var displayalert= function(alerttext) {
+     $('#game-div').css('visibility', 'hidden');
+     $('#warning').show();
+     $('#inventory-div').hide();
+     $('#button-div').hide();
+     $('#emoji-div').hide();
+   
+	}
 
 
 
@@ -368,6 +374,7 @@ var setEventHandlers = function() {
   $('#x5-berries-button').click(Eat5Berriesbutton);
   $('#restart-button').click(restartgame);
   $('#game-over').hide();
+   $('#warning').hide();
   setInterval(fallenwoodCounter,1000);
   setInterval(berryAvailableCounter,1000);
   $('#Health').click(healthButtonClick);
