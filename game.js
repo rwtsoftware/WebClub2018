@@ -277,6 +277,9 @@ var BuildCar=function(){
 var buildHouse=function(){
   // If decrease money and wood successful then add car and drive
   if(DecreaseMoney(2) && DecreasewoodCount(9)) {
+  	var current_value = Number.parseInt($('#-house-available-count').text());
+  $('#-house-available-count').text(current_value + 10 );
+  
 	//carAvailableCounter();
 	//$('#emoji-div').append('<img src="car.png">');
     //runMap()
