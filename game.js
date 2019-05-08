@@ -173,7 +173,7 @@ var Sellberriesbutton = function() {
   // Decrease Berries and if successful increase money by 10
   if (DecreaseBerryCount(1)) {
     var current_value = Number.parseInt($('#Money-count').text());
-    $('#Health-count-').text(current_value + 10 );
+    $('#Money-count').text(current_value + 10 );
   }
 };
 
