@@ -35,7 +35,7 @@ button{
     height: 80px;
     position: absolute;
     background-color: transparent;
-    border-color: gray;
+    border-color: #820000;
     opacity: 1.0;
     border-width: 5000px;
     border-style: solid;
