@@ -8,7 +8,7 @@ Todos:
 var PickUpWoodButtonClick = function() {
   // If wood fallen count less then 10 alert and quit function
   if(Number.parseInt($('#wood-fallen-count').text()) <10){
-   alert("no wood found in forest");
+   alert("no wood found in forest"); alert('Health is low');
     return;
   }
 increaseWoodCount();
