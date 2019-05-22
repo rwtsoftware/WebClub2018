@@ -14,11 +14,11 @@
 	text-align:right;
 }
 body{
-	background-color:768567;
+	background-color:green;
 }
 button{
     background-color:#000000;
-    color:#ffffff;
+    color:#dddddd;
 	border:dark green;
 	border-style:solid;
 	height:40px;
