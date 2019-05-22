@@ -105,6 +105,7 @@ var changetimeofdayCounter= function() {
     $('body').css('background-color','yellow');
   // If health count is low set background to red
   }else {
+  	  alert("you are about to diy");
  	$('body').css('background-color','red');
   }
 
