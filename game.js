@@ -56,7 +56,7 @@ var onesecondtimer = function() {
 var fallenwoodCounter = function() {
   // Increase Fallen wood count by 1
   var current_value = Number.parseInt($('#wood-fallen-count').text());
-  $('#wood-fallen-count').text(current_value + 1);
+  $('#wood-fallen-count').text(current_value + 1);   alert("Your taking fall damage");
 };
 
 var berryAvailableCounter = function() {
